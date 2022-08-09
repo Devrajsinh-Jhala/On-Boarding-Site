@@ -1,0 +1,46 @@
+@font-face {
+  font-family: 'Gazpacho';
+  src: url('../fonts/Gazpacho/Gazpacho\ Black.ttf');
+  font-weight: 900;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Gazpacho';
+  font-weight: 700;
+  font-style: normal;
+  src: url('../fonts/Gazpacho/Gazpacho\ Bold.ttf');
+}
+@font-face {
+  font-family: 'Gazpacho';
+  font-weight: 800;
+  font-style: normal;
+  src: url('../fonts/Gazpacho/Gazpacho\ Heavy.ttf');
+}
+@font-face {
+  font-family: 'Gazpacho';
+  font-weight: 500;
+  font-style: normal;
+  src: url('../fonts/Gazpacho/Gazpacho\ Medium.ttf');
+}
+@font-face {
+  font-family: 'Gazpacho';
+  font-weight: 400;
+  font-style: normal;
+  src: url('../fonts/Gazpacho/Gazpacho\ Regular.ttf');
+}
+@font-face {
+  font-family: 'Gazpacho';
+  font-weight: 300;
+  font-style: normal;
+  src: url('../fonts/Gazpacho/Gazpacho\ Light.ttf');
+}
+@font-face {
+  font-family: 'Gazpacho';
+  font-weight: 100;
+  font-style: normal;
+  src: url('../fonts/Gazpacho/Gazpacho\ Thin.ttf');
+}
+
+.fontGazpacho {
+  font-family: 'Gazpacho';
+}
