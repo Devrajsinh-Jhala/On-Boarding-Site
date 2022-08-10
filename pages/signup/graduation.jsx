@@ -4,7 +4,7 @@ import { useRouter } from 'next/dist/client/router';
 
 import Link from 'next/dist/client/link';
 import classNames from '../../utils/constants/classNames';
-import Input from '../../modals/signup/Input';
+import Input from '../../components/common/Input';
 import InputError from '../../components/common/InputError';
 
 const Graduation = () => {

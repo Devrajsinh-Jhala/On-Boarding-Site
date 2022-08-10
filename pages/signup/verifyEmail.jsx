@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/dist/client/link';
 import classNames from '../../utils/constants/classNames';
-import Input from '../../modals/signup/Input';
+import Input from '../../components/common/Input';
 import InputMessage from '../../components/common/InputMessage';
 import InputError from '../../components/common/InputError';
 
