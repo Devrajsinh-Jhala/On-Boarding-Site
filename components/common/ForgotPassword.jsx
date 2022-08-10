@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import Input from '../../modals/signup/Input';
+import Input from './Input';
 import classNames from '../../utils/constants/classNames';
 import Error from './InputError';
 import InputMessage from './InputMessage';
@@ -145,7 +145,9 @@ const ForgotPassword = ({ handleClose }) => {
       resetPassword(email, otp, password)
         .then((res) => {
           handleSetError('otpLoad', 'Password have been successfully changed');
-          window.location.replace(process.env.NEXT_PUBLIC_DASHBOARD_URL+`?token=${res.headers["token"]}`);
+          window.location.replace(
+            `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?token=${res.headers.token}`
+          );
         })
         .catch(() => {
           handleSetError('otpLoad', '');

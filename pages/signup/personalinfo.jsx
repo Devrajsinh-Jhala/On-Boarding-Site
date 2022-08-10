@@ -5,7 +5,7 @@ import { useRouter } from 'next/dist/client/router';
 import PhoneInput from 'react-phone-input-2';
 import InputMessage from '../../components/common/InputMessage';
 import classNames from '../../utils/constants/classNames';
-import Input from '../../modals/signup/Input';
+import Input from '../../components/common/Input';
 import InputError from '../../components/common/InputError';
 import 'react-phone-input-2/lib/style.css';
 

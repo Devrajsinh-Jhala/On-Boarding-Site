@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import Input from '../../modals/signup/Input';
+import Input from '../../components/common/Input';
 import classNames from '../../utils/constants/classNames';
 import InputError from '../../components/common/InputError';
 import InputMessage from '../../components/common/InputMessage';

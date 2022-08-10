@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Error from '../components/common/InputError';
-import Input from '../modals/signup/Input';
+import Input from '../components/common/Input';
 import ForgotPassword from '../components/common/ForgotPassword';
 
 const Login = () => {

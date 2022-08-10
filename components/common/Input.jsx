@@ -12,7 +12,7 @@ const Input = ({
 }) => (
   <div className="w-full">
     <label
-      className="my-2.5 font-semibold leading-relaxed block text-sm"
+      className="my-2 font-semibold leading-relaxed block text-sm"
       style={{ color: '#201e27' }}
     >
       {label}
@@ -28,7 +28,7 @@ const Input = ({
       {...inputProps}
       onChange={handleChange}
       style={{ lineHeight: 1.15 }}
-      className="rounded-md mb-2.5 border w-full text-sm p-2.5 transition-all border-gray-300 duration-300 ease-in focus:ring-0 focus:border-2 outline-none focus:border-focus-cyan"
+      className="rounded-md mb-0.5 border w-full text-sm p-2.5 transition-all border-gray-300 duration-300 ease-in focus:ring-0 focus:border-2 outline-none focus:border-focus-cyan"
     />
   </div>
 );
