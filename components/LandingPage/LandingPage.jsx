@@ -4,6 +4,8 @@ import { useEffect, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Footer from '../students/Footer';
+import LivePeer from '../Socials/LivePeer';
+import OtherComponents from '../Socials/OtherComponents';
 
 // const bankofamerica = require('../../public/svg/bankofamerica.svg');
 // const wellsfargo = require('../../public/svg/wellsfargo.svg');
@@ -264,6 +266,8 @@ const LandingPage = () => {
           </div>
         </div>
       </section>
+      <OtherComponents />
+      <LivePeer />
       <Footer />
       {/* 
 

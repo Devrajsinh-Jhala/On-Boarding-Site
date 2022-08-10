@@ -112,7 +112,7 @@ const Skills = () => {
     //   skills
     // );
 
-    router.push('/signup/verifyEmail');
+    router.push('/signup/connect');
   };
 
   return (

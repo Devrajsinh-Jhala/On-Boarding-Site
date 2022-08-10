@@ -1,6 +1,7 @@
 import React from 'react';
 import CompanyCards from '../common/Other Components/CompanyCards';
 import { BiRightArrowAlt } from 'react-icons/bi';
+import PreferenceTags from '../common/Other Components/PreferenceTags';
 
 const OtherComponents = () => {
   return (
@@ -43,7 +44,7 @@ const OtherComponents = () => {
       {/* Divider */}
       <div className="w-full mb-10 mt-10 h-[225px] bg-[#ebf4f6]" />
 
-      <div className="text-center mt-10">
+      <div className=" mt-10">
         {/* Second Tagline */}
         <div className="flex flex-col items-center justify-start">
           <h2 className=" w-fit px-4  text-center lg:max-w-[780px] font-inter text-[40px] md:text-[60px] font-bold tracking-[-2px] leading-[1.3em]">
@@ -55,6 +56,35 @@ const OtherComponents = () => {
             Salary. Diversity. Benefits. Location. Everything you’re looking
             for.
           </p>
+        </div>
+
+        {/* Preference Tags */}
+        <div className="flex mt-10 flex-col items-center justify-center">
+          <div className="grid grid-cols-4">
+            <div className="col-span-1">
+              <PreferenceTags />
+            </div>
+            <div className="col-span-1">
+              <PreferenceTags />
+            </div>
+            <div className="col-span-1">
+              <PreferenceTags />
+            </div>
+            <div className="col-span-1">
+              <PreferenceTags />
+            </div>
+          </div>
+          <div className="grid grid-cols-3">
+            <div className="col-span-1">
+              <PreferenceTags />
+            </div>
+            <div className="col-span-1">
+              <PreferenceTags />
+            </div>
+            <div className="col-span-1">
+              <PreferenceTags />
+            </div>
+          </div>
         </div>
 
         {/* Second Divider */}
