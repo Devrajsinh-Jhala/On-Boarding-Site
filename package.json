@@ -17,6 +17,7 @@
     "node": "14.x"
   },
   "dependencies": {
+    "@reduxjs/toolkit": "^1.8.3",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
     "axios": "^0.21.4",
@@ -27,6 +28,7 @@
     "react-flags-select": "^2.1.2",
     "react-icons": "^4.4.0",
     "react-phone-input-2": "^2.14.0",
+    "react-redux": "^8.0.2",
     "tailwind-scrollbar-hide": "^1.1.7"
   },
   "devDependencies": {
