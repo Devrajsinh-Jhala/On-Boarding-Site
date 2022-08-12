@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import Input from '../../components/common/Input';
 import classNames from '../../utils/constants/classNames';
 import InputError from '../../components/common/InputError';
@@ -8,6 +9,8 @@ import InputMessage from '../../components/common/InputMessage';
 import 'react-phone-input-2/lib/style.css';
 
 const SignUp = () => {
+  const router = useRouter();
+
   const [passwordToggle, setPasswordToggle] = useState(false);
   const steps = 1;
 
@@ -161,6 +164,14 @@ const SignUp = () => {
     return () => clearTimeout(timeoutId);
   }, [email]);
 
+  function submitData() {
+    // console.log(data);
+    sessionStorage.setItem('email', data.email);
+    setTimeout(() => {
+      router.push('/signup/verifyEmail');
+    }, 500);
+  }
+
   return (
     // <Backdrop>
     <div className="flex w-screen h-screen overflow-y-hidden bg-white">
@@ -285,19 +296,20 @@ const SignUp = () => {
                 {passwordError && <InputError error={passwordError} />}
               </div>
             </div>
-            <Link href="/signup/verifyEmail">
-              <a>
-                <button
-                  type="button"
-                  className={classNames(
-                    'bg-signup-blue disabled:cursor-not-allowed disabled:bg-opacity-50 mt-6 w-36 text-sm mx-auto mb-12 block text-white px-3 py-2.5 rounded-md transition-all duration-200 ease-in font-bold'
-                  )}
-                  style={{ lineHeight: '1.375rem' }}
-                >
-                  Next
-                </button>
-              </a>
-            </Link>
+            {/* <Link href="/signup/verifyEmail"> */}
+            <a>
+              <button
+                onClick={submitData}
+                type="button"
+                className={classNames(
+                  'bg-signup-blue disabled:cursor-not-allowed disabled:bg-opacity-50 mt-6 w-36 text-sm mx-auto mb-12 block text-white px-3 py-2.5 rounded-md transition-all duration-200 ease-in font-bold'
+                )}
+                style={{ lineHeight: '1.375rem' }}
+              >
+                Next
+              </button>
+            </a>
+            {/* </Link> */}
           </form>
 
           <div style={{ margin: '0 10%' }}>
@@ -316,10 +328,10 @@ const SignUp = () => {
               style={{ fontSize: '15px', color: '#788699' }}
             >
               Already have an account?{' '}
-              <Link href="/login" passHref>
-                <span className="font-semibold cursor-pointer text-signup-blue">
+              <Link href="/login">
+                <a className="font-semibold cursor-pointer text-signup-blue">
                   Log In
-                </span>
+                </a>
               </Link>
             </p>
           </div>
