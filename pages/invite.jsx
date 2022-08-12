@@ -1,7 +1,30 @@
-import Link from 'next/link';
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/router';
+// import InputError from '../components/common/InputError';
+import InputMessage from '../components/common/InputMessage';
 
-function index() {
+function Invite() {
+  const router = useRouter();
+  const [invite, setInvite] = useState('');
+  const [checkInvite, setCheckInvite] = useState(false);
+  const [checking, setChecking] = useState(true);
+
+  function handleInvite(e) {
+    setInvite(e.target.value);
+    if (invite.length === 5) {
+      setCheckInvite(true);
+      setTimeout(() => {
+        setChecking(false);
+        setTimeout(() => {
+          router.push('/signup');
+        }, 600);
+      }, 1400);
+    }
+  }
+  useEffect(() => {
+    document.querySelector('#inviteCode').focus();
+  }, []);
+
   return (
     <>
       <div className="flex w-screen h-screen overflow-y-hidden bg-white">
@@ -52,19 +75,25 @@ function index() {
                   </div>
                   <input
                     id="inviteCode"
-                    className=" w-full overflow-hidden sm:w-[200px] leading-[1.3rem] text-[14px] mt-5 tracking-[-0.015em] font-inter pl-[15px] border border-gray-400 rounded-lg  focus:outline-none py-[15px] h-[43px] "
+                    onChange={handleInvite}
+                    value={invite}
+                    className=" w-full overflow-hidden sm:w-[200px] leading-[1.3rem] text-[14px] mt-5 tracking-[-0.015em] font-inter pl-[15px] border border-gray-400 rounded-lg mb-2  focus:outline-none py-[15px] h-[43px] "
                     type="text"
-                    name="email"
+                    name="invite"
                     placeholder="Invite Code"
                     maxLength={6}
                   />
-                  <Link href="/signup">
+                  {checkInvite && (
+                    <InputMessage message="checking" loading={checking} />
+                  )}
+                  {/* {emailError && <InputError error={emailError} />} */}
+                  {/* <Link href="/signup">
                     <a>
                       <div className="mt-5 font-inter hover:bg-slate-700 bg-black hidden sm:block text-white rounded-md  text-[0.9rem] p-[0.7rem] font-semibold cursor-pointer absolute px-[1.5rem]">
                         Unlock Access
                       </div>
                     </a>
-                  </Link>
+                  </Link> */}
                 </div>
               </div>
             </div>
@@ -75,4 +104,4 @@ function index() {
   );
 }
 
-export default index;
+export default Invite;
