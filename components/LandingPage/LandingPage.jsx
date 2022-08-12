@@ -6,6 +6,7 @@ import 'aos/dist/aos.css';
 import Footer from '../students/Footer';
 import LivePeer from '../Socials/LivePeer';
 import OtherComponents from '../Socials/OtherComponents';
+import styles from '../../styles/student.module.css';
 
 // const bankofamerica = require('../../public/svg/bankofamerica.svg');
 // const wellsfargo = require('../../public/svg/wellsfargo.svg');
@@ -104,12 +105,14 @@ const LandingPage = () => {
       <div className="home-img border-0 bg-no-repeat bg-cover h-[100vh] sm-mid-tablet:bg-bottom bg-right">
         <div className="sm:grid sm:grid-cols-10 sm:gap-3 md:gap-6 mx-auto max-w-screen-xl px-6 md:px-12">
           <section className="col-span-10 lg:col-span-4 pt-[19%]">
-            <h1 className="text-5xl tracking-tight leading-leading-first font-bold mb-8 sm-mid-tablet:text-3xl sm-mid-tablet:leading-snug">
+            <h1
+              className={` text-[36px] sm:text-[42px] tracking-wide sm:tracking-[-0.015em] leading-[60px] ${styles.fontGazpacho} font-extrabold  mb-8 sm-mid-tablet:text-3xl sm-mid-tablet:leading-snug`}
+            >
               Bridging companies and campuses to
               <span className="text-purple-500"> empower students</span>
             </h1>
-            <p className=" text-lg mb-8 mt-0">
-              GradTheory is creating a future where it is exciting and fair to
+            <p className=" text-lg tracking-[-0.015em] mb-8 mt-0">
+              Hirable is creating a future where it is exciting and fair to
               pursue your career in the ever-evolving world of technology.
             </p>
           </section>
@@ -121,10 +124,10 @@ const LandingPage = () => {
         data-aos-delay="220"
       >
         <h3
-          className="leading-first md:text-sec md:leading-sec font-body mb-8 font-semibold "
+          className={`leading-first sm-mid-tablet:leading-snug ${styles.fontGazpacho} md:text-sec md:leading-sec font-body mb-8 font-semibold `}
           style={{
-            fontSize: 'calc(1.425rem + 1vw)',
-            fontWeight: '600',
+            fontSize: '38px',
+            fontWeight: '700',
           }}
         >
           They can be your future employers
@@ -155,7 +158,9 @@ const LandingPage = () => {
         data-aos="fade-up"
         data-aos-delay="220"
       >
-        <h3 className="text-4xl antialiased text-center font-semibold mb-6">
+        <h3
+          className={`text-[38px] sm-mid-tablet:leading-snug antialiased  ${styles.fontGazpacho} text-center font-bold mb-6`}
+        >
           Creating an ecosystem of opportunities
         </h3>
         <p className="text-lg mb-8 leading-[1.875rem] text-center">
@@ -169,28 +174,32 @@ const LandingPage = () => {
       </div>
 
       {/* SECTION 4 */}
-      <div
-        className="bg-[#fffaf5] mid-lg:block grid grid-cols-2  mt-18 py-16 pr-4"
-        data-aos="fade-up"
-        data-aos-delay="220"
-      >
-        <img
+      <section className="xl:mx-20">
+        <div
+          className="bg-[#fffaf5] mid-lg:block   mt-18 py-16 pr-4"
+          data-aos="fade-up"
+          data-aos-delay="220"
+        >
+          {/* <img
           src="/images/collaboration.png"
           alt="collabration"
           className="w-fit object-cover h-96 rounded-md"
-        />
-        <div className="ml-8 mid-lg:mt-8 mt-0">
-          <h3 className="text-4xl antialiased font-semibold mb-6">
-            Introducing GradTheory
-          </h3>
-          <p className="text-lg mb-8 leading-[1.875rem]">
-            Recent graduates want great jobs. Companies want great talent.
-            GradTheory enables collaboration between companies, universities and
-            their students by creating an ecosystem of opportunities where
-            students are rewarded with opportunities they deserve
-          </p>
+        /> */}
+          <div className="ml-8 flex flex-col items-center justify-center text-center mid-lg:mt-8 mt-0">
+            <h3
+              className={`text-4xl ${styles.fontGazpacho} antialiased font-semibold mb-6`}
+            >
+              Introducing Hirable
+            </h3>
+            <p className="text-lg text-center  md:w-[70%] tracking-[-.015em] mb-8 leading-[1.875rem]">
+              Recent graduates want great jobs. Companies want great talent.
+              Hirable enables collaboration between companies, universities and
+              their students by creating an ecosystem of opportunities where
+              students are rewarded with opportunities they deserve
+            </p>
+          </div>
         </div>
-      </div>
+      </section>
 
       <section
         className="relative py-8 md:py-12"
@@ -210,14 +219,15 @@ const LandingPage = () => {
                     />
                   </div>
                   <div className="p-10">
-                    <div className="text-[#1e1928cc] text-[18px] leading-6 md:leading-7 md:text-lg antialiased tracking-tight font-bold">
+                    <div
+                      className={`text-black ${styles.fontGazpacho} text-[18px] leading-6 md:leading-7 md:text-lg antialiased tracking-tight font-bold`}
+                    >
                       For Students
                     </div>
-                    <p className="mt-4 text-[16px] leading-7 text-[#1e1928cc] font-normal">
+                    <p className="mt-4 tracking-[-0.015em] text-[17px] leading-[1.75rem] text-black font-normal">
                       We help candidates showcase their skills and experience to
                       employers as a way to get hired by connecting student
                       experiences to opportunities&nbsp;
-                      <span className="whitespace-nowrap">-&gt;</span>
                     </p>
                   </div>
                 </a>
@@ -230,14 +240,15 @@ const LandingPage = () => {
                     />
                   </div>
                   <div className="p-10">
-                    <div className="text-[#1e1928cc] text-[18px] leading-6 md:leading-7 md:text-lg antialiased tracking-tight font-bold">
+                    <div
+                      className={`text-black ${styles.fontGazpacho} text-[18px] leading-6 md:leading-7 md:text-lg antialiased tracking-tight font-bold`}
+                    >
                       For companies
                     </div>
-                    <p className="mt-4 text-[16px] leading-7 text-[#1e1928cc] font-normal">
+                    <p className="mt-4 tracking-[-0.015em] text-[17px] leading-[1.75rem] text-black font-normal">
                       We partner with employers to help companies discover the
                       untapped talent and redefine the way hiring takes
                       place&nbsp;
-                      <span className="whitespace-nowrap">-&gt;</span>
                     </p>
                   </div>
                 </a>
@@ -250,14 +261,15 @@ const LandingPage = () => {
                     />
                   </div>
                   <div className="p-10">
-                    <div className="text-[#1e1928cc] text-[18px] leading-6 md:leading-7 md:text-lg antialiased tracking-tight font-bold">
+                    <div
+                      className={`text-black ${styles.fontGazpacho} text-[18px] leading-6 md:leading-7 md:text-lg antialiased tracking-tight font-bold`}
+                    >
                       For colleges
                     </div>
-                    <p className="mt-4 text-[16px] leading-7 text-[#1e1928cc] font-normal">
+                    <p className="mt-4 text-[17px] tracking-[-0.015em] leading-[1.75rem] text-black font-normal">
                       We collaborate with colleges to transform the educational
                       opportunities and introduce student talents to the
                       industry&nbsp;
-                      <span className="whitespace-nowrap">-&gt;</span>
                     </p>
                   </div>
                 </a>
