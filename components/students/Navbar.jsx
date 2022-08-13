@@ -73,7 +73,7 @@ const Navbar = () => {
                   </Link>
                 </li>
               ))}
-              <Link href="/login" passHref>
+              <Link href="/mobile" passHref>
                 <div className="block text-base  mr-3 text-black cursor-pointer leading-[1.6em] ">
                   Login
                 </div>
