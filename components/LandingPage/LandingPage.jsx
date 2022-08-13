@@ -106,7 +106,7 @@ const LandingPage = () => {
         <div className="sm:grid sm:grid-cols-10 sm:gap-3 md:gap-6 mx-auto max-w-screen-xl px-6 md:px-12">
           <section className="col-span-10 lg:col-span-4 pt-[19%]">
             <h1
-              className={` text-[36px] sm:text-[42px] tracking-wide sm:tracking-[-0.015em] leading-[60px] ${styles.fontGazpacho} font-extrabold  mb-8 sm-mid-tablet:text-3xl sm-mid-tablet:leading-snug`}
+              className={` text-[40px] sm:text-[42px] tracking-wider sm:tracking-[-0.015em] leading-[60px] ${styles.fontGazpacho} font-extrabold  mb-8 sm-mid-tablet:text-3xl sm-mid-tablet:leading-snug`}
             >
               Bridging companies and campuses to
               <span className="text-purple-500"> empower students</span>
@@ -124,9 +124,9 @@ const LandingPage = () => {
         data-aos-delay="220"
       >
         <h3
-          className={`leading-first sm-mid-tablet:leading-snug ${styles.fontGazpacho} md:text-sec md:leading-sec font-body mb-8 font-semibold `}
+          className={`leading-first tracking-[-1px] sm-mid-tablet:leading-snug ${styles.fontGazpacho} md:text-sec md:leading-sec font-body mb-8 font-semibold `}
           style={{
-            fontSize: '38px',
+            fontSize: '40px',
             fontWeight: '700',
           }}
         >
@@ -159,7 +159,7 @@ const LandingPage = () => {
         data-aos-delay="220"
       >
         <h3
-          className={`text-[38px] sm-mid-tablet:leading-snug antialiased  ${styles.fontGazpacho} text-center font-bold mb-6`}
+          className={`text-[40px] sm-mid-tablet:leading-snug antialiased tracking-[-1px]  ${styles.fontGazpacho} text-center font-bold mb-6`}
         >
           Creating an ecosystem of opportunities
         </h3>

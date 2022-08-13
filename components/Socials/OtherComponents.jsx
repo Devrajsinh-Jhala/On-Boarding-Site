@@ -3,6 +3,7 @@ import CompanyCards from '../common/Other Components/CompanyCards';
 import { BiRightArrowAlt } from 'react-icons/bi';
 import PreferenceTags from '../common/Other Components/PreferenceTags';
 import styles from '../../styles/student.module.css';
+import DataComponent from '../common/Other Components/DataComponent';
 
 const OtherComponents = () => {
   return (
@@ -47,48 +48,38 @@ const OtherComponents = () => {
 
       {/* Divider */}
       <div className="w-full mb-10 mt-10  h-fit bg-[#ebf4f6]">
-        <div className=" flex items-center justify-between p-6 ">
-          <div className="flex w-fit flex-col  ">
-            <h3
-              className={`text-[24px] leading-[34px] font-bold tracking-[-0.015em] text-[#1E1928] mb-2 ${styles.fontGazpacho}  `}
-            >
-              100+
-            </h3>
-            <p className="text-[16px] font-medium leading-[24px] md:leading-[30px] md:text-[18px] tracking-[-.011em] antialiased text-[#1e1928cc]">
-              Offers with an annual CTC more than $100k
-            </p>
-          </div>
-          <div className="flex w-fit  flex-col ">
-            <h3
-              className={`text-[24px] leading-[34px] font-bold tracking-[-0.015em] text-[#1E1928] mb-2 ${styles.fontGazpacho}  `}
-            >
-              2000+
-            </h3>
-            <p className="text-[16px] font-medium leading-[24px] md:leading-[30px] md:text-[18px] tracking-[-.011em] antialiased text-[#1e1928cc]">
-              Oppurtunities at leading tech companies
-            </p>
+        <div className=" flex items-center justify-center p-6 ">
+          <div className="grid grid-span-1 sm:grid-cols-2 gap-10 sm:gap-32">
+            <div className="col-span-1">
+              <DataComponent
+                heading={'100+'}
+                description={' Offers with an annual CTC more than $100k'}
+              />
+            </div>
+            <div className="col-span-1">
+              <DataComponent
+                heading={' 2000+'}
+                description={' Oppurtunities at leading tech companies'}
+              />
+            </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 p-6">
-          <div className="flex  flex-col col-span-1 ">
-            <h3
-              className={`text-[24px] leading-[34px] font-bold tracking-[-0.015em] text-[#1E1928] mb-2 ${styles.fontGazpacho}  `}
-            >
-              1200+
-            </h3>
-            <p className="text-[16px] font-medium leading-[24px] md:leading-[30px] md:text-[18px] tracking-[-.011em] antialiased text-[#1e1928cc]">
-              Emerging startups and leading tech companies
-            </p>
-          </div>
-          <div className="flex  flex-col col-span-1 ">
-            <h3
-              className={`text-[24px] leading-[34px] font-bold tracking-[-0.015em] text-[#1E1928] mb-2 ${styles.fontGazpacho}  `}
-            >
-              $100k-$1M
-            </h3>
-            <p className="text-[16px] font-medium leading-[24px] md:leading-[30px] md:text-[18px] tracking-[-.011em] antialiased text-[#1e1928cc]">
-              In funding avaliable for colleges and universities
-            </p>
+        <div className="flex items-center justify-center p-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-32">
+            <div className=" col-span-1 ">
+              <DataComponent
+                heading={'1200+'}
+                description={'Emerging startups and leading tech companies'}
+              />
+            </div>
+            <div className="col-span-1 ">
+              <DataComponent
+                heading={'$100k-$1M'}
+                description={
+                  'In funding avaliable for colleges and universities'
+                }
+              />
+            </div>
           </div>
         </div>
       </div>
@@ -107,12 +98,12 @@ const OtherComponents = () => {
 
         {/* Preference Tags */}
         <div className="flex mt-10 flex-col items-center justify-center">
-          <div className=" flex items-center  w-full justify-center space-x-3">
+          <div className=" grid lg:grid-cols-4 md:grid-cols-2">
             <div className="col-span-1">
               <PreferenceTags text={'Centralization of Learning'} />
             </div>
             <div className="col-span-1">
-              <PreferenceTags text={'Experience Enhancement Programs'} />
+              <PreferenceTags text={'Increased Experience'} />
             </div>
             <div className="col-span-1">
               <PreferenceTags text={'Project based Hiring'} />
@@ -121,15 +112,17 @@ const OtherComponents = () => {
               <PreferenceTags text={'Experience based hiring'} />
             </div>
           </div>
-          <div className="flex items-center w-full lg:mr-3 justify-center mt-3 space-x-3">
+          <div className="grid lg:grid-cols-3 grid-cols-1 md:grid-cols-2 mt-2">
             <div className="col-span-1">
               <PreferenceTags text={'Talent Icons'} />
             </div>
             <div className="col-span-1">
               <PreferenceTags text="Workshop Credits" />
             </div>
-            <div className="col-span-1">
-              <PreferenceTags text="Assignment based hiring" />
+            <div className="col-span-1 ">
+              <div className="">
+                <PreferenceTags text="Assignment based hiring" />
+              </div>
             </div>
           </div>
           <p
