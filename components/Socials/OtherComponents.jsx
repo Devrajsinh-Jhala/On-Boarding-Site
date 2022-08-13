@@ -11,7 +11,7 @@ const OtherComponents = () => {
       <div className=" flex flex-col items-center justify-start mt-40">
         {/* Tagline */}
         <h2
-          className={`px-4 ${styles.fontGazpacho} w-fit lg:max-w-[780px] text-center font-inter text-[40px]  font-bold tracking-[-1px] leading-[1.3em]`}
+          className={`px-4 ${styles.fontGazpacho} w-fit lg:max-w-[780px] text-center font-inter text-[30px]  font-bold tracking-[-1px] leading-[1.3em]`}
         >
           Today's top companies are hiring
         </h2>
@@ -48,7 +48,7 @@ const OtherComponents = () => {
 
       {/* Divider */}
       <div className="w-full mb-10 mt-10  h-fit bg-[#ebf4f6]">
-        <div className=" flex items-center justify-center p-6 ">
+        <div className=" flex items-center pt-14 justify-center p-6 ">
           <div className="grid grid-span-1 sm:grid-cols-2 gap-10 sm:gap-32">
             <div className="col-span-1">
               <DataComponent
@@ -64,7 +64,7 @@ const OtherComponents = () => {
             </div>
           </div>
         </div>
-        <div className="flex items-center justify-center p-6">
+        <div className="flex items-center pb-18 justify-center p-6">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 sm:gap-32">
             <div className=" col-span-1 ">
               <DataComponent
@@ -88,7 +88,7 @@ const OtherComponents = () => {
         {/* Second Tagline */}
         <div className="flex flex-col items-center justify-start">
           <h2
-            className={` ${styles.fontGazpacho} w-fit px-4  text-center lg:max-w-[780px] font-inter text-[40px]  font-bold tracking-[-1px] leading-[1.3em]`}
+            className={` ${styles.fontGazpacho} w-fit px-4  text-center lg:max-w-[780px] font-inter text-[30px]  font-bold tracking-[-1px] leading-[1.3em]`}
           >
             Ideas for you
           </h2>
@@ -131,9 +131,9 @@ const OtherComponents = () => {
             And more... to connect student experiences to opportunities
           </p>
 
-          <div className="my-5 text-lg tracking-[-0.015em] leading-6 border-[1px] border-green-500 text-green-500 font-semibold rounded-full w-fit h-fit p-4 ">
+          {/* <div className="my-5 text-lg tracking-[-0.015em] leading-6 border-[1px] border-green-500 text-green-500 font-semibold rounded-full w-fit h-fit p-4 ">
             <p>MORE COMING SOON</p>
-          </div>
+          </div> */}
         </div>
 
         {/* Second Divider */}

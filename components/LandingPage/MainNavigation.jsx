@@ -51,7 +51,7 @@ const MainNavigation = () => {
           <div className="ml-auto md:hidden">
             <div
               onClick={() => setOpen(!open)}
-              className="text-3xl -mt-3 absolute right-8 top-6 cursor-pointer md:hidden"
+              className="text-3xl -mt-3 absolute right-8 top-8 cursor-pointer md:hidden"
             >
               {open === true ? <AiOutlineClose /> : <AiOutlineMenu />}
             </div>
@@ -73,7 +73,7 @@ const MainNavigation = () => {
                   </Link>
                 </li>
               ))}
-              <Link href="/login" passHref>
+              <Link href="/mobile" passHref>
                 <div className="block text-base  mr-3 text-black cursor-pointer leading-[1.6em] ">
                   Login
                 </div>
