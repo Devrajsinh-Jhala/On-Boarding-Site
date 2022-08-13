@@ -17,13 +17,12 @@ export const emailAvail = (email) =>
     email,
   });
 
-export const verifyOtp = (123456, 'example.@gmail.com');
-// (otp, email) =>
-//   axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/verify-otp`, {
-//     {
-//     otp: `${123456}`,
-//     email,
-//   });
+export const verifyOtp = (otp, email) =>
+  axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/verify-otp`,
+    {
+      otp,
+      email,
+    });
 export const requestOtp = (email, reason) =>
   axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/request-otp`, {
     email,
