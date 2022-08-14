@@ -22,7 +22,7 @@ const Navbar = () => {
               />
             </div>
           </Link>
-          <div className="ml-auto md:flex space-x-4 items-center hidden">
+          <div className="ml-auto lg:flex space-x-4 items-center hidden">
             <Link href="/colleges" passHref>
               <div className="block text-base text-black cursor-pointer leading-[1.6em] ">
                 Colleges
@@ -48,22 +48,22 @@ const Navbar = () => {
               </button>
             </Link>
           </div>
-          <div className="ml-auto md:hidden">
+          <div className="ml-auto lg:hidden">
             <div
               onClick={() => setOpen(!open)}
-              className="text-3xl -mt-3 absolute right-8 top-6 cursor-pointer md:hidden"
+              className="text-3xl -mt-3 absolute right-8 top-6 cursor-pointer lg:hidden"
             >
               {open === true ? <AiOutlineClose /> : <AiOutlineMenu />}
             </div>
             <ul
-              className={`md:flex text-center md:pb-0 pb-12 absolute md:static bg-white md:z-auto left-0 w-full z-[-1] md:pl-0  md:w-auto items-center transition-all duration-500 ease-in ${
+              className={`lg:flex text-center lg:pb-0 pb-12 absolute lg:static bg-white lg:z-auto left-0 w-full z-[-1] lg:pl-0  lg:w-auto items-center transition-all duration-500 ease-in ${
                 open ? 'top-20' : 'top-[-490px]'
               } `}
             >
               {Links.map((link) => (
                 <li
                   key={link.name}
-                  className="md:ml-8 text-base md:my-0 my-7 font-inter"
+                  className="lg:ml-8 text-base lg:my-0 my-7 font-inter"
                 >
                   <Link
                     className="text-black hover:text-[#2536eb] font-semibold duration-500"
