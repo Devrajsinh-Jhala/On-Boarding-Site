@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Link from 'next/link';
+import axios from 'axios';
 import Error from '../components/common/InputError';
 import Input from '../components/common/Input';
 import ForgotPassword from '../components/common/ForgotPassword';
@@ -26,21 +27,51 @@ const Login = () => {
 
   const onSubmit = async (event) => {
     event.preventDefault();
-    import('../utils/apis/auth').then(({ login }) => {
-      login(formData)
-        .then((res) => {
-          // console.log(`resr==es::${JSON.stringify(res.headers)}`);
-          window.location.replace(
-            `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?token=${res.headers.token}`
-          );
-        })
-        .catch(() => {
-          setErrors((f) => ({
-            ...f,
-            emailError: 'Email and password did not match',
-          }));
-        });
-    });
+    console.log(formData);
+
+    const options = {
+      method: 'POST',
+      url: `${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/users/login`,
+      data: {
+        email: formData.email,
+        password: formData.password,
+      },
+    };
+
+    axios
+      .request(options)
+      .then((response) => {
+        // console.log(response.data.data.apiToken);
+        sessionStorage.setItem('apiToken', response.data.data.apiToken);
+        if (response.data.status === 206) {
+          window.location.replace('http://localhost:3000/signup/location');
+        }
+      })
+      .catch((error) => {
+        setErrors((f) => ({
+          ...f,
+
+          emailError: 'Email and password did not match',
+        }));
+      });
+
+    // import('../utils/apis/auth').then(({ login }) => {
+    //   login(formData)
+    //     .then((res) => {
+    //       console.log(res);
+    //       // console.log(`resr==es::${JSON.stringify(res.headers)}`);
+    //       window.location.replace(
+    //         `${process.env.NEXT_PUBLIC_DASHBOARD_URL}?token=${res.headers.token}`
+    //       );
+    //     })
+    //     .catch((e) => {
+    //       setErrors((f) => ({
+    //         ...f,
+
+    //         emailError: 'Email and password did not match',
+    //       }));
+    //     });
+    // });
   };
   const checkEmail = (value, test) => {
     if (value.length === 0) {
@@ -67,15 +98,15 @@ const Login = () => {
     return true;
   };
   const checkPassword = (value, test) => {
-    if (!/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(value)) {
-      if (!test)
-        setErrors((f) => ({
-          ...f,
-          passwordError:
-            'Password should be minimum of 6 characters and should contain atleast one number, one uppercase character and one special character',
-        }));
-      return false;
-    }
+    // if (!/^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{6,}$/.test(value)) {
+    //   if (!test)
+    //     setErrors((f) => ({
+    //       ...f,
+    //       passwordError:
+    //         'Password should be minimum of 6 characters and should contain atleast one number, one uppercase character and one special character',
+    //     }));
+    //   return false;
+    // }
     if (!test) resetErrors();
     return true;
   };

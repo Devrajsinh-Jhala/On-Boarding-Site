@@ -8,8 +8,6 @@ import Input from '../../components/common/Input';
 import InputError from '../../components/common/InputError';
 
 const Graduation = () => {
-  const [steps, setSteps] = useState(3);
-
   const [data, setData] = useState({
     college: '',
     graduationYear: 0,
@@ -79,48 +77,34 @@ const Graduation = () => {
   };
 
   const handleErrors = (field, value) => {
-    switch (steps) {
-      case 3:
-        switch (field) {
-          case 'graduationYear':
-            checkGradYear(value);
-            break;
-          case 'college':
-            checkCollege(value);
-            break;
-          case 'degree':
-            checkDegree(value);
-            break;
-          case 'major':
-            checkMajor(value);
-            break;
-          default:
-            break;
-        }
+    switch (field) {
+      case 'graduationYear':
+        checkGradYear(value);
         break;
-
+      case 'college':
+        checkCollege(value);
+        break;
+      case 'degree':
+        checkDegree(value);
+        break;
+      case 'major':
+        checkMajor(value);
+        break;
       default:
         break;
     }
   };
 
   const checkErrorsExist = (exists) => {
-    switch (steps) {
-      case 3:
-        if (
-          checkCollege(college, true) &&
-          checkDegree(degree, true) &&
-          checkGradYear(graduationYear, true) &&
-          checkMajor(major, true)
-        ) {
-          setValidation(true);
-        } else {
-          setValidation(false);
-        }
-        break;
-
-      default:
-        break;
+    if (
+      checkCollege(college, true) &&
+      checkDegree(degree, true) &&
+      checkGradYear(graduationYear, true) &&
+      checkMajor(major, true)
+    ) {
+      setValidation(true);
+    } else {
+      setValidation(false);
     }
   };
 
@@ -128,9 +112,35 @@ const Graduation = () => {
     setData((f) => ({ ...f, [e.target.name]: e.target.value }));
     setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
   };
-  useEffect(() => checkErrorsExist(), [data, steps]);
+  useEffect(() => checkErrorsExist(), [data]);
+  useEffect(() => {
+    const c = sessionStorage.getItem('college');
+    const d = sessionStorage.getItem('degree');
+    const g = sessionStorage.getItem('graduationYear');
+    const m = sessionStorage.getItem('major');
+    if (c && d && g && m) {
+      setData({
+        college: c,
+        graduationYear: d,
+        degree: g,
+        major: m,
+      });
+    }
+  }, []);
 
   const router = useRouter();
+  function nextPage() {
+    // console.log(college, degree, graduationYear, major);
+    sessionStorage.setItem('college', college);
+    sessionStorage.setItem('degree', degree);
+    sessionStorage.setItem('graduationYear', graduationYear);
+    sessionStorage.setItem('major', major);
+
+    setTimeout(() => {
+      // window.location.replace('');
+      router.push('/signup/personalinfo');
+    }, 500);
+  }
 
   return (
     <>
@@ -190,7 +200,7 @@ const Graduation = () => {
                   />
                   <div
                     className={classNames(
-                      'h-1 w-6 rounded-md mr-1.5 cursor-pointer bg-blue-500'
+                      'h-1 w-6 rounded-md mr-1.5 cursor-pointer bg-gray-200'
                     )}
                   />
                   <div
@@ -236,7 +246,7 @@ const Graduation = () => {
               />
               {collegeError && <InputError error={collegeError} />}
 
-              <div className="flex items-center">
+              <div className="flex items-center pb-6">
                 <div>
                   <label
                     className="my-2.5 font-semibold leading-relaxed block text-sm"
@@ -280,30 +290,15 @@ const Graduation = () => {
                   }}
                   className="w-3/5"
                 >
-                  <label
-                    className="my-2.5 w-full  font-semibold leading-relaxed block text-sm"
-                    style={{ color: '#201e27' }}
-                  >
-                    Degree
-                  </label>
-                  <select
-                    placeholder="Degree"
+                  <Input
+                    label="Degree"
+                    type="text"
+                    placeholder="B Tech"
                     name="degree"
                     value={degree}
-                    onChange={handleChange}
-                    style={{ lineHeight: '1.15rem' }}
-                    className="rounded-md mb-2.5 border w-full text-sm p-3 outline-none focus:border-2 focus:border-focus-cyan"
-                  >
-                    <option value="">Select Degree Name</option>
-                    <option value="BTech">BTech</option>
-                    <option value="BSc">BSc</option>
-                    <option value="BBA">BBA</option>
-                    <option value="BA">BA</option>
-                    <option value="Bcom">Bcom</option>
-                    <option value="BCA">BCA</option>
-                    <option value="BFA">BFA</option>
-                    <option value="BE">BE</option>
-                  </select>
+                    handleChange={handleChange}
+                  />
+
                   {degreeError && <InputError error={degreeError} />}
                 </div>
               </div>
@@ -320,17 +315,18 @@ const Graduation = () => {
                 {majorError && <InputError error={majorError} />}
               </div>
               <div className="flex justify-center">
-                <Link href="/signup/personalinfo">
-                  <a>
-                    <button
-                      type="button"
-                      className="p-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed mt-3 w-40"
-                      // disabled={!validated}
-                    >
-                      Next
-                    </button>
-                  </a>
-                </Link>
+                {/* <Link href="/signup/personalinfo"> */}
+                <a>
+                  <button
+                    onClick={nextPage}
+                    type="button"
+                    className="p-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed mt-3 w-40"
+                    // disabled={!validated}
+                  >
+                    Next
+                  </button>
+                </a>
+                {/* </Link> */}
               </div>
             </div>
           </div>
