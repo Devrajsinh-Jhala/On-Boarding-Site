@@ -3,7 +3,7 @@ import axios from 'axios';
 axios.defaults.withCredentials = true;
 
 export const login = (body) =>
-  axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/login`, body);
+  axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/api/v1/users/login`, body);
 
 export const signUp = (body) =>
   axios.post(`${process.env.NEXT_PUBLIC_BACKEND_URL}/auth/register`, body);
