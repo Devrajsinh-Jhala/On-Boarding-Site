@@ -2,12 +2,12 @@ import React from 'react';
 // import CompanyImage from '../Other Components/CompanyImage.png';
 import Image from 'next/image';
 
-const CompanyCards = ({ title, company, image }) => {
+const CompanyCards2 = ({ title, company, image }) => {
   return (
     <div className="md:w-[380px] cursor-pointer hover:shadow-md rounded-2xl h-fit border-[1px] p-4">
       <div className="flex items-start justify-between w-[100%]">
         <div className="max-w-[70%]">
-          <p className="font-inter w-[270px] text-lg leading-[1.4em] font-bold">
+          <p className="font-inter text-lg leading-[1.4em] font-bold">
             {title}
           </p>
           <p className="font-inter text-base mt-1 leading-[1.4em]">{company}</p>
@@ -23,7 +23,7 @@ const CompanyCards = ({ title, company, image }) => {
             height={'48px'}
             width="48px"
             alt="Company"
-            src={`/images/${image}.jpg`}
+            src={`/images/${image}.png`}
           />
         </div>
       </div>
@@ -31,4 +31,4 @@ const CompanyCards = ({ title, company, image }) => {
   );
 };
 
-export default CompanyCards;
+export default CompanyCards2;

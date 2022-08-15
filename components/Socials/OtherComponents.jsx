@@ -5,10 +5,13 @@ import PreferenceTags from '../common/Other Components/PreferenceTags';
 import styles from '../../styles/student.module.css';
 import DataComponent from '../common/Other Components/DataComponent';
 
+import Google from '../../public/images/google logo.png';
+import CompanyCards2 from '../common/Other Components/CompanyCards2';
+
 const OtherComponents = () => {
   return (
-    <div>
-      <div className=" flex flex-col items-center justify-start mt-40">
+    <section data-aos="fade-up" data-aos-delay="220">
+      <div className=" flex flex-col items-center justify-start mt-16">
         {/* Tagline */}
         <h2
           className={`px-4 ${styles.fontGazpacho} w-fit lg:max-w-[780px] text-center font-inter text-[30px]  font-bold tracking-[-1px] leading-[1.3em]`}
@@ -25,29 +28,59 @@ const OtherComponents = () => {
       </div>
 
       {/* Company Cards */}
-      <div className="mx-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
-        <div className="col-span-1">
-          <CompanyCards />
-        </div>
-        <div className="col-span-1">
-          <CompanyCards />
-        </div>
-        <div className="col-span-1">
-          <CompanyCards />
-        </div>
-        <div className="col-span-1">
-          <CompanyCards />
-        </div>
-        <div className="col-span-1">
-          <CompanyCards />
-        </div>
-        <div className="col-span-1">
-          <CompanyCards />
+      <div className="flex items-center justify-center">
+        <div className="mx-[50px] grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4 mt-5">
+          <div className="col-span-1">
+            <CompanyCards2
+              title={'Software Engineering Intern'}
+              company={'Google'}
+              image={'google logo'}
+            />
+          </div>
+          <div className="col-span-1">
+            <CompanyCards
+              title={'Autopilot Foundations Internship C/C++'}
+              company={'Tesla'}
+              image={'tesla logo'}
+            />
+          </div>
+          <div className="col-span-1">
+            <CompanyCards
+              title={'Software Engineering UberSTAR Internship Program'}
+              company={'Uber'}
+              image={'uber logo'}
+            />
+          </div>
+          <div className="col-span-1">
+            <CompanyCards2
+              title={'Product Management Intern'}
+              company={'Microsoft'}
+              image={'microsoft logo'}
+            />
+          </div>
+          <div className="col-span-1">
+            <CompanyCards
+              title={'AWS HR Leadership Development Program Intern'}
+              company={'Amazon Web Services(AWS) '}
+              image={'aws logo'}
+            />
+          </div>
+          <div className="col-span-1">
+            <CompanyCards
+              title={'Creator Growth Operation Intern'}
+              company={'TikTok'}
+              image={'tiktok logo'}
+            />
+          </div>
         </div>
       </div>
 
       {/* Divider */}
-      <div className="w-full mb-10 mt-10  h-fit bg-[#ebf4f6]">
+      <section
+        data-aos="fade-up"
+        data-aos-delay="220"
+        className="w-full mb-16 mt-16  h-fit bg-[#ebf4f6]"
+      >
         <div className=" flex items-center pt-14 justify-center p-6 ">
           <div className="grid grid-span-1 sm:grid-cols-2 gap-10 sm:gap-32">
             <div className="col-span-1">
@@ -82,9 +115,9 @@ const OtherComponents = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
 
-      <div className=" mt-10">
+      <section data-aos="fade-up" data-aos-delay="220" className=" mt-20">
         {/* Second Tagline */}
         <div className="flex flex-col items-center justify-start">
           <h2
@@ -137,23 +170,23 @@ const OtherComponents = () => {
         </div>
 
         {/* Second Divider */}
-        <div className="w-full px-[20px] mb-10 md:px-[50px] flex items-center justify-center ">
+        <div className="w-full px-[20px] mb-16 mt-16 md:px-[50px] flex items-center justify-center ">
           <div className="w-full h-fit max-w-[1340px] mb-10 mt-10 md:h-[150px] rounded-xl bg-[#ebf4f6]">
             <div className="flex md:flex-row flex-col mx-auto py-[32px] px-[24px] w-full items-start justify-start md:justify-between">
               <div className="float-left flex flex-col justify-start items-start text-lg leading-[1.4em] ">
                 {/* Title */}
                 <div className=" text-left font-inter font-bold leading-[1.25em]">
-                  On Untapped, you own your story.
+                  Hirable brings the best opportunities to you
                 </div>
                 {/* Sub Title*/}
                 <div className="font-inter text-left my-2">
-                  Unlike other job platforms, we never guess your gender, race,
-                  or ethnicity.
+                  Do you know that the world's highest graduate CTC is offered
+                  to students on Hirable?
                 </div>
                 {/* Arrow Text */}
                 <div className="flex items-center cursor-pointer justify-center">
                   <p className="font-inter text-base leading-[1.4em] text-blue-600">
-                    Read why
+                    Check out
                   </p>
                   <span className="text-base text-blue-600">
                     <BiRightArrowAlt />
@@ -163,8 +196,8 @@ const OtherComponents = () => {
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </section>
   );
 };
 

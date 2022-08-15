@@ -4,7 +4,7 @@ import styles from '../../styles/student.module.css';
 
 const LivePeer = () => {
   return (
-    <div className="px-4 mb-10">
+    <section data-aos="fade-up" data-aos-delay="220" className="px-4 mb-16">
       <div className="flex mt-10 flex-col items-center justify-center">
         {/* Sub Heading */}
         <p className="font-medium text-[20px] sm:text-[22px] font-inter text-center mb-4 max-w-[960px] mx-auto ">
@@ -52,7 +52,7 @@ const LivePeer = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

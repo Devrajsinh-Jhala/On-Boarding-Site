@@ -50,26 +50,26 @@ function Invite() {
             </p>
           </div>
         </div>
-        <div className="w-[60%] self-center pt-24 pb-16 h-screen 2xl:h-[800px] 2xl:my-auto md:px-20 overflow-y-auto">
+        <div className="w-[60%] self-center pt-32 pb-16 h-screen 2xl:h-[800px] 2xl:my-auto md:px-20 overflow-y-auto">
           {/*  */}
           <div className="w-full max-w-xl" style={{ color: '#141820' }}>
-            <div className="self-center h-[60vh] overflow-y-auto">
+            <div className="self-center h-[60vh]">
               <div className="flex flex-col items-center max-w-xl">
                 <div>
-                  <div className="space-y-8 justify-start font-inter">
-                    <div className="leading-[1.3rem] overflow-hidden">
+                  <div className="space-y-10 justify-start font-inter">
+                    <div className="leading-[1.5rem]  overflow-hidden">
                       Hey, Hirable is the world&apos;s first platform
                       exclusively built for students with the goal of connecting
                       student experiences to opportunities.
                     </div>
-                    <div className="leading-[1.3rem] overflow-hidden">
+                    <div className="leading-[1.5rem] overflow-hidden">
                       We&apos;re still opening up for students from different
                       universities across the world. You can join with an invite
                       from your university career center or from an existing
                       user!
                       <br /> Sign up to take your career to the next level.
                     </div>
-                    <div className="leading-[1.3rem]">
+                    <div className="leading-[1.5rem]">
                       We can&apos;t wait to be a part of your success!
                     </div>
                   </div>
