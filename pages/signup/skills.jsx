@@ -90,8 +90,21 @@ const Skills = () => {
       });
     }
   };
-
+  useEffect(() => {
+    let s = sessionStorage.getItem('skills');
+    if (s) {
+      s = s.split(',');
+      setSkills(s);
+    }
+  }, []);
   const handleSubmit = () => {
+    // console.log(skills);
+    sessionStorage.setItem('skills', skills);
+
+    setTimeout(() => {
+      // window.location.replace('');
+      router.push('/signup/connect');
+    }, 500);
     // console.log(
     //   name,
     //   email,
@@ -111,8 +124,6 @@ const Skills = () => {
     //   experience,
     //   skills
     // );
-
-    router.push('/signup/connect');
   };
 
   return (
@@ -258,7 +269,7 @@ const Skills = () => {
                   className="p-3 mt-3 bg-signup-blue text-white rounded-md text-sm font-medium w-40"
                   onClick={handleSubmit}
                 >
-                  Register
+                  Next
                 </button>
               </div>
             </div>

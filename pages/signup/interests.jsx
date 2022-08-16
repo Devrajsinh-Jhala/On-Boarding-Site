@@ -6,6 +6,7 @@ import Error from '../../components/common/InputError';
 import classNames from '../../utils/constants/classNames';
 
 const Interests = () => {
+  const [next, setNextpage] = useState(false);
   const [roles, setRoles] = useState([]);
   const router = useRouter();
   const [dataSet, setDataSet] = useState([
@@ -121,9 +122,11 @@ const Interests = () => {
   const checkErrorsExist = (exists) => {
     if (roles.length >= 2) {
       setValidation(true);
+      setNextpage(true);
       handleSetErrors('rolesError', '');
     } else {
       setValidation(false);
+      setNextpage(false);
       handleSetErrors('rolesError', 'Please select atleast 2 roles');
     }
   };
@@ -133,6 +136,22 @@ const Interests = () => {
     otpLoad: '',
   });
   useEffect(() => checkErrorsExist(), [roles]);
+  useEffect(() => {
+    let r = sessionStorage.getItem('roles');
+    if (r) {
+      r = r.split(',');
+      setRoles(r);
+    }
+  }, []);
+  function nextPage() {
+    // console.log(roles);
+    sessionStorage.setItem('roles', roles);
+
+    setTimeout(() => {
+      // window.location.replace('');
+      router.push('/signup/experience');
+    }, 500);
+  }
 
   return (
     <div className="flex w-screen h-screen overflow-y-hidden bg-white">
@@ -277,16 +296,16 @@ const Interests = () => {
                 })}
               </div>
               <div className="flex justify-center">
-                <Link href="/signup/experience">
-                  <a>
-                    <button
-                      type="button"
-                      className="p-3 mt-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed w-40"
-                    >
-                      Next
-                    </button>
-                  </a>
-                </Link>
+                <a>
+                  <button
+                    onClick={nextPage}
+                    type="button"
+                    className="p-3 mt-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed w-40 disabled:bg-opacity-50"
+                    disabled={!next}
+                  >
+                    Next
+                  </button>
+                </a>
               </div>
             </div>
           </div>

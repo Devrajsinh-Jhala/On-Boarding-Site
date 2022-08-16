@@ -11,8 +11,8 @@ import 'react-phone-input-2/lib/style.css';
 
 const PersonalInfo = () => {
   const router = useRouter();
+  const [next, setNextpage] = useState(false);
 
-  const [steps, setSteps] = useState(4);
   const [data, setData] = useState({
     username: '',
     alternateEmail: '',
@@ -22,30 +22,13 @@ const PersonalInfo = () => {
   });
   const [errors, setErrors] = useState({
     usernameError: '',
-    emailError: '',
-    passwordError: '',
-    collegeError: '',
-    graduationYearError: '',
-    degreeError: '',
-    majorError: '',
-    validated: false,
-    otpError: '',
-    usernameAvail: false,
     altEmailError: '',
-    rolesError: 'Please select atleast 2 roles',
-    emailLoad: '',
+    usernameAvail: false,
     usernameLoad: '',
   });
   const { alternateEmail, mobileNo, altMobileNo, about, username } = data;
 
-  const {
-    usernameAvail,
-    altEmailError,
-    usernameError,
-    majorError,
-
-    usernameLoad,
-  } = errors;
+  const { usernameAvail, altEmailError, usernameError, usernameLoad } = errors;
 
   const handleSetErrors = (field, value) =>
     setErrors((f) => ({ ...f, [field]: value }));
@@ -57,12 +40,6 @@ const PersonalInfo = () => {
       fNameError: '',
       usernameError: '',
       emailError: '',
-      passwordError: '',
-      collegeError: '',
-      graduationYearError: '',
-      degreeError: '',
-      majorError: '',
-      otpError: '',
     }));
   // //////////////////ERRORS //////////////////
   const checkUsername = (value, test) => {
@@ -103,18 +80,12 @@ const PersonalInfo = () => {
   // /////////////////////////////////////////////
 
   const handleErrors = (field, value) => {
-    switch (steps) {
-      case 4:
-        switch (field) {
-          case 'username':
-            checkUsername(value);
-            break;
-          case 'alternateEmail':
-            checkAltEmail(value);
-            break;
-          default:
-            break;
-        }
+    switch (field) {
+      case 'username':
+        checkUsername(value);
+        break;
+      case 'alternateEmail':
+        checkAltEmail(value);
         break;
       default:
         break;
@@ -122,21 +93,16 @@ const PersonalInfo = () => {
   };
 
   const checkErrorsExist = (exists) => {
-    switch (steps) {
-      case 4:
-        if (
-          checkUsername(username, true) &&
-          checkAltEmail(alternateEmail, true) &&
-          (exists || usernameAvail)
-        ) {
-          setValidation(true);
-        } else {
-          setValidation(false);
-        }
-        break;
-
-      default:
-        break;
+    if (
+      checkUsername(username, true) &&
+      checkAltEmail(alternateEmail, true) &&
+      (exists || usernameAvail)
+    ) {
+      setNextpage(true);
+      setValidation(true);
+    } else {
+      setNextpage(false);
+      setValidation(false);
     }
   };
 
@@ -144,7 +110,7 @@ const PersonalInfo = () => {
     setData((f) => ({ ...f, [e.target.name]: e.target.value }));
     setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
   };
-  useEffect(() => checkErrorsExist(), [data, steps]);
+  useEffect(() => checkErrorsExist(), []);
   useEffect(() => {
     handleSetErrors('usernameAvail', false);
     handleSetErrors('validated', false);
@@ -157,21 +123,26 @@ const PersonalInfo = () => {
     if (username.length > 0 && checkUsername(username, true)) {
       timeoutId = setTimeout(
         () => {
-          import('../../utils/apis/auth').then(({ usernameAvailable }) => {
-            usernameAvailable(username)
-              .then(() => {
-                handleSetErrors('usernameLoad', 'Username available');
-                handleSetErrors('usernameError', '');
-                handleSetErrors('usernameAvail', true);
-                checkErrorsExist(true);
-              })
-              .catch(() => {
-                handleSetErrors('usernameLoad', '');
-                handleSetErrors('usernameError', 'Username is already taken');
-                handleSetErrors('validated', false);
-                handleSetErrors('usernameAvail', false);
-              });
-          });
+          handleSetErrors('usernameLoad', 'Username available');
+          handleSetErrors('usernameError', '');
+          handleSetErrors('usernameAvail', true);
+          checkErrorsExist(true);
+
+          // import('../../utils/apis/auth').then(({ usernameAvailable }) => {
+          //   usernameAvailable(username)
+          //     .then(() => {
+          //       handleSetErrors('usernameLoad', 'Username available');
+          //       handleSetErrors('usernameError', '');
+          //       handleSetErrors('usernameAvail', true);
+          //       checkErrorsExist(true);
+          //     })
+          //     .catch(() => {
+          //       handleSetErrors('usernameLoad', '');
+          //       handleSetErrors('usernameError', 'Username is already taken');
+          //       handleSetErrors('validated', false);
+          //       handleSetErrors('usernameAvail', false);
+          //     });
+          // });
         },
 
         2000
@@ -179,6 +150,37 @@ const PersonalInfo = () => {
     }
     return () => clearTimeout(timeoutId);
   }, [username]);
+
+  useEffect(() => {
+    const u = sessionStorage.getItem('username');
+    const aE = sessionStorage.getItem('alternateEmail');
+    const m = sessionStorage.getItem('mobileNo');
+    const aM = sessionStorage.getItem('altMobileNo');
+    const a = sessionStorage.getItem('about');
+    if (u) {
+      setData({
+        username: u,
+        alternateEmail: aE,
+        mobileNo: m,
+        altMobileNo: aM,
+        about: a,
+      });
+    }
+  }, []);
+
+  function nextPage() {
+    // console.log(username, alternateEmail, mobileNo, altMobileNo, about);
+    sessionStorage.setItem('username', username);
+    sessionStorage.setItem('alternateEmail', alternateEmail);
+    sessionStorage.setItem('mobileNo', mobileNo);
+    sessionStorage.setItem('altMobileNo', altMobileNo);
+    sessionStorage.setItem('about', about);
+
+    setTimeout(() => {
+      // window.location.replace('');
+      router.push('/signup/interests');
+    }, 500);
+  }
 
   return (
     <div className="flex w-screen h-screen overflow-y-hidden bg-white">
@@ -344,19 +346,18 @@ const PersonalInfo = () => {
                 onChange={handleChange}
               />
             </div>
-            {majorError && <InputError error={majorError} />}
 
             <div className="flex justify-center">
-              <Link href="/signup/interests">
-                <a>
-                  <button
-                    type="button"
-                    className="p-3 mt-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed w-40"
-                  >
-                    Next
-                  </button>
-                </a>
-              </Link>
+              <a>
+                <button
+                  onClick={nextPage}
+                  type="button"
+                  className="p-3 mt-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed w-40 disabled:bg-opacity-50"
+                  disabled={!next}
+                >
+                  Next
+                </button>
+              </a>
             </div>
           </div>
         </div>
