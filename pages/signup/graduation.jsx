@@ -8,6 +8,7 @@ import Input from '../../components/common/Input';
 import InputError from '../../components/common/InputError';
 
 const Graduation = () => {
+  const [next, setNextpage] = useState(false);
   const [data, setData] = useState({
     college: '',
     graduationYear: 0,
@@ -102,9 +103,11 @@ const Graduation = () => {
       checkGradYear(graduationYear, true) &&
       checkMajor(major, true)
     ) {
-      setValidation(true);
+      setNextpage(true);
+      // setValidation(true);
     } else {
-      setValidation(false);
+      setNextpage(false);
+      // setValidation(false);
     }
   };
 
@@ -200,7 +203,7 @@ const Graduation = () => {
                   />
                   <div
                     className={classNames(
-                      'h-1 w-6 rounded-md mr-1.5 cursor-pointer bg-gray-200'
+                      'h-1 w-6 rounded-md mr-1.5 cursor-pointer bg-blue-500'
                     )}
                   />
                   <div
@@ -315,18 +318,16 @@ const Graduation = () => {
                 {majorError && <InputError error={majorError} />}
               </div>
               <div className="flex justify-center">
-                {/* <Link href="/signup/personalinfo"> */}
                 <a>
                   <button
                     onClick={nextPage}
                     type="button"
-                    className="p-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed mt-3 w-40"
-                    // disabled={!validated}
+                    className="p-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed mt-3 w-40 disabled:bg-opacity-50"
+                    disabled={!next}
                   >
                     Next
                   </button>
                 </a>
-                {/* </Link> */}
               </div>
             </div>
           </div>
