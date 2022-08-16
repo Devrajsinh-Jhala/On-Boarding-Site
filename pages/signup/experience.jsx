@@ -102,6 +102,23 @@ const Experience = () => {
     }
   };
 
+  useEffect(() => {
+    let e = sessionStorage.getItem('experience');
+    if (e) {
+      e = e.split(',');
+      setExperience(e);
+    }
+  }, []);
+  function nextPage() {
+    // console.log(experience);
+    sessionStorage.setItem('experience', experience);
+
+    setTimeout(() => {
+      // window.location.replace('');
+      router.push('/signup/skills');
+    }, 500);
+  }
+
   return (
     <div className="flex w-screen h-screen overflow-y-hidden bg-white">
       <div
@@ -240,16 +257,15 @@ const Experience = () => {
                 })}
               </div>
               <div className="flex justify-center">
-                <Link href="/signup/skills">
-                  <a>
-                    <button
-                      type="button"
-                      className="p-3 mt-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed w-40"
-                    >
-                      Next
-                    </button>
-                  </a>
-                </Link>
+                <a>
+                  <button
+                    onClick={nextPage}
+                    type="button"
+                    className="p-3 mt-3 bg-black text-white rounded-md text-sm font-medium disabled:bg-gray-600 disabled:cursor-not-allowed w-40 disabled:bg-opacity-50"
+                  >
+                    Next
+                  </button>
+                </a>
               </div>
             </div>
           </div>

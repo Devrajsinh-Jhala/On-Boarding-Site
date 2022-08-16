@@ -169,7 +169,7 @@ const PersonalInfo = () => {
   }, []);
 
   function nextPage() {
-    console.log(username, alternateEmail, mobileNo, altMobileNo, about);
+    // console.log(username, alternateEmail, mobileNo, altMobileNo, about);
     sessionStorage.setItem('username', username);
     sessionStorage.setItem('alternateEmail', alternateEmail);
     sessionStorage.setItem('mobileNo', mobileNo);
