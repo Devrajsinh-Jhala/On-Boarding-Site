@@ -1,7 +1,6 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
-import Link from 'next/link';
 import classNames from '../../utils/constants/classNames';
 
 const Experience = () => {
@@ -9,29 +8,34 @@ const Experience = () => {
   const router = useRouter();
 
   const [dataSet, setDataSet] = useState([
-    { name: 'Business' },
     { name: 'Sales' },
+    { name: 'Social Work' },
     { name: 'Marketing' },
-    { name: 'Networking' },
-    { name: 'Systems' },
-    { name: 'Backend' },
-    { name: 'Security' },
-    { name: 'Frontend' },
-    { name: 'Data Science' },
-    { name: 'Testing' },
+    { name: 'Law' },
+    { name: 'Influencer Marketing' },
     { name: 'Product Management' },
-    { name: 'Finance' },
-    { name: 'Hardware' },
+    { name: 'Entrepreneurship ' },
     { name: 'UI/UX Design' },
-    { name: 'Full Stack' },
-    { name: 'Mobile' },
-    { name: 'Product Design' },
-    { name: 'Machine Learning' },
+    { name: 'Genetics' },
+    { name: 'Cybersecurity' },
+    { name: 'Data Science' },
     { name: 'Accounting' },
-    { name: 'Trading' },
+    { name: 'Finance' },
     { name: 'Art' },
-    { name: 'Legal' },
-    { name: 'Biotech' },
+    { name: 'Testing' },
+    { name: 'Food & Nutrition' },
+    { name: 'Cosmetics R & D' },
+    { name: 'Nanotechnology' },
+    { name: 'Virtual Reality' },
+    { name: 'Augmented Reality' },
+    { name: 'Blockchain' },
+    { name: 'Textile' },
+    { name: 'AgriTech' },
+    { name: 'Industrial Biotech' },
+    { name: 'Pharmaceutical' },
+    { name: 'Neuroscience' },
+    { name: 'Robotics' },
+    { name: 'Fashion' },
   ]);
 
   const [totalSelectedItems, setTotalSelectedItems] = useState(0);
@@ -210,7 +214,8 @@ const Experience = () => {
         <div className="w-full max-w-xl pt-12 h-fit my-auto">
           <div className="">
             <p className="mb-2 font-semibold text-md">
-              What areas have you had the most experience with?
+              What areas you had most experience with or looking forward to
+              explore?
             </p>
             <div className="relative">
               <input

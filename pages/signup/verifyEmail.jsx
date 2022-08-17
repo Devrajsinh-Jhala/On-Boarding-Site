@@ -30,8 +30,9 @@ const Interests = () => {
       handleSetErrors('otpLoad', 'Validating OTP');
       setOtp((f) => ({ ...f, isEnabled: false }));
       setTimeout(() => {
-        handleSetErrors('otpError', 'Invalid OTP !');
-        // handleSetErrors('otpLoad', 'OTP Validated');
+        // handleSetErrors('otpError', 'Invalid OTP !');
+        handleSetErrors('otpLoad', 'OTP Validated');
+        window.location.replace('/signup/location');
       }, 5000);
       // import('../../utils/apis/auth').then(({ verifyOtp }) => {
       //   verifyOtp(otpData, email)
@@ -62,10 +63,10 @@ const Interests = () => {
 
   const reSendOTP = () => {
     setOtp((f) => ({ ...f, isEnabled: false }));
+    document.getElementById('otp').focus();
     // import('../../utils/apis/auth').then(({ requestOtp }) =>
     //   requestOtp(email, 'confirmEmail ')
     //     .then(() => {
-    //       document.getElementById('otp').focus();
     //       setOtp((f) => ({ ...f, isEnabled: true }));
     //     })
     //     .catch(() => {
@@ -151,16 +152,14 @@ const Interests = () => {
                 Click on the link in the email to verify your account. You may
                 need to check your <strong>spam</strong> folder.
               </p>
-              <Link href="/signup/location">
-                <button
-                  // onClick={() => reSendOTP()}
-                  type="button"
-                  className="bg-signup-blue disabled:cursor-default disabled:bg-opacity-50 text-sm mx-auto text-white px-3 py-2.5 rounded-md font-bold mt-10"
-                  style={{ lineHeight: '1.375rem' }}
-                >
-                  Don&apos;t see it? Resend
-                </button>
-              </Link>
+              <button
+                onClick={() => reSendOTP()}
+                type="button"
+                className="bg-signup-blue disabled:cursor-default disabled:bg-opacity-50 text-sm mx-auto text-white px-3 py-2.5 rounded-md font-bold mt-10"
+                style={{ lineHeight: '1.375rem' }}
+              >
+                Don&apos;t see it? Resend
+              </button>
               <p className="text-base text-center mt-2">
                 Not your account ?{' '}
                 <Link href="/">

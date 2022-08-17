@@ -8,19 +8,40 @@ const Skills = () => {
   const router = useRouter();
 
   const [dataSet, setDataSet] = useState([
-    { name: 'Angular js', selected: false },
-    { name: 'Apache spark', selected: false },
-    { name: 'C', selected: false },
-    { name: 'C++', selected: false },
-    { name: 'Kotlin', selected: false },
-    { name: 'Java', selected: false },
-    { name: 'Python', selected: false },
-    { name: 'Node js', selected: false },
-    { name: 'React js', selected: false },
-    { name: 'Linux', selected: false },
-    { name: 'Github', selected: false },
-    { name: 'SQL', selected: false },
     { name: 'MongoDB', selected: false },
+    { name: 'Creative Writing', selected: false },
+    { name: 'Blogging', selected: false },
+    { name: 'Content Marketing', selected: false },
+    { name: 'Public Speaking', selected: false },
+    { name: 'Painting', selected: false },
+    { name: 'Sales', selected: false },
+    { name: 'Teaching', selected: false },
+    { name: 'Acting', selected: false },
+    { name: 'Interviewing', selected: false },
+    { name: 'Investigative Reporting', selected: false },
+    { name: 'Social Media Marketing', selected: false },
+    { name: 'Video Making', selected: false },
+    { name: 'Farm Operations', selected: false },
+    { name: 'Crops Management', selected: false },
+    { name: 'AutoCAD', selected: false },
+    { name: 'Autodesk Revit', selected: false },
+    { name: 'Project Management', selected: false },
+    { name: 'Accounting', selected: false },
+    { name: 'Bioinformatics', selected: false },
+    { name: 'Biology', selected: false },
+    { name: 'C', selected: false },
+    { name: 'C#', selected: false },
+    { name: 'Calligraphy', selected: false },
+    { name: 'Data Analytics', selected: false },
+    { name: 'Data Science', selected: false },
+    { name: 'Economics', selected: false },
+    { name: 'Embroidery making', selected: false },
+    { name: 'Fashion Designing', selected: false },
+    { name: 'Fashion Styling', selected: false },
+    { name: 'Financial Modeling', selected: false },
+    { name: 'History', selected: false },
+    { name: 'Immunological Techniques', selected: false },
+    { name: 'Internet of Things(IoT)', selected: false },
   ]);
 
   const [totalSelectedItems, setTotalSelectedItems] = useState(0);
@@ -102,63 +123,63 @@ const Skills = () => {
     sessionStorage.setItem('skills', skills);
 
     setTimeout(() => {
-      // window.location.replace('');
+      window.location.replace('/signup/connect');
       // router.push('/signup/connect');
     }, 500);
 
-    // page 1
-    const invite = sessionStorage.getItem('invite');
-    // page 2
-    const name = sessionStorage.getItem('name');
-    const password = sessionStorage.getItem('password');
-    const email = sessionStorage.getItem('email');
-    // page 4
-    const location = sessionStorage.getItem('location');
-    const timezone = sessionStorage.getItem('timezones');
-    // page 5
-    const college = sessionStorage.getItem('college');
-    const degree = sessionStorage.getItem('degree');
-    const graduationYear = sessionStorage.getItem('graduationYear');
-    const major = sessionStorage.getItem('major');
-    // page 6
-    const username = sessionStorage.getItem('username');
-    const alternateEmail = sessionStorage.getItem('alternateEmail');
-    const mobileNo = sessionStorage.getItem('mobileNo');
-    const altMobileNo = sessionStorage.getItem('altMobileNo');
-    const about = sessionStorage.getItem('about');
-    // page 7
-    const roles = sessionStorage.getItem('roles');
-    // page 8
-    const experience = sessionStorage.getItem('experience');
-    // page 9
-    const skills = sessionStorage.getItem('skills');
+    // // page 1
+    // const invite = sessionStorage.getItem('invite');
+    // // page 2
+    // const name = sessionStorage.getItem('name');
+    // const password = sessionStorage.getItem('password');
+    // const email = sessionStorage.getItem('email');
+    // // page 4
+    // const location = sessionStorage.getItem('location');
+    // const timezone = sessionStorage.getItem('timezones');
+    // // page 5
+    // const college = sessionStorage.getItem('college');
+    // const degree = sessionStorage.getItem('degree');
+    // const graduationYear = sessionStorage.getItem('graduationYear');
+    // const major = sessionStorage.getItem('major');
+    // // page 6
+    // const username = sessionStorage.getItem('username');
+    // const alternateEmail = sessionStorage.getItem('alternateEmail');
+    // const mobileNo = sessionStorage.getItem('mobileNo');
+    // const altMobileNo = sessionStorage.getItem('altMobileNo');
+    // const about = sessionStorage.getItem('about');
+    // // page 7
+    // const roles = sessionStorage.getItem('roles');
+    // // page 8
+    // const experience = sessionStorage.getItem('experience');
+    // // page 9
+    // const skills = sessionStorage.getItem('skills');
 
-    console.log(
-      'invite : ',
-      invite,
-      '\nname: ',
-      name,
-      '\nemail: ',
-      email,
-      '\npassword: ',
-      password,
-      'location',
-      location,
-      'timezone',
-      timezone,
-      college,
-      graduationYear,
-      degree,
-      major,
-      username,
-      alternateEmail,
-      mobileNo,
-      altMobileNo,
-      about,
-      roles,
-      experience,
-      skills
-    );
+    // console.log(
+    //   'invite : ',
+    //   invite,
+    //   '\nname: ',
+    //   name,
+    //   '\nemail: ',
+    //   email,
+    //   '\npassword: ',
+    //   password,
+    //   'location',
+    //   location,
+    //   'timezone',
+    //   timezone,
+    //   college,
+    //   graduationYear,
+    //   degree,
+    //   major,
+    //   username,
+    //   alternateEmail,
+    //   mobileNo,
+    //   altMobileNo,
+    //   about,
+    //   roles,
+    //   experience,
+    //   skills
+    // );
   };
 
   return (

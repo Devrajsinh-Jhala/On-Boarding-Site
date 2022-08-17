@@ -1,5 +1,4 @@
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/dist/client/router';
 
 import PhoneInput from 'react-phone-input-2';
@@ -28,7 +27,7 @@ const PersonalInfo = () => {
   });
   const { alternateEmail, mobileNo, altMobileNo, about, username } = data;
 
-  const { usernameAvail, altEmailError, usernameError, usernameLoad } = errors;
+  const { usernameAvail, usernameError, usernameLoad } = errors;
 
   const handleSetErrors = (field, value) =>
     setErrors((f) => ({ ...f, [field]: value }));
@@ -296,7 +295,7 @@ const PersonalInfo = () => {
               placeholder="Enter Alternate Email"
               type="text"
             />
-            {altEmailError && <InputError error={altEmailError} />}
+            {/* {altEmailError && <InputError error={altEmailError} />} */}
             <div className="flex">
               <div className="flex-1">
                 <label
