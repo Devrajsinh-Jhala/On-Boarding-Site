@@ -3,7 +3,7 @@ import React from 'react';
 const AboutUs = () => {
   return (
     <div className="mt-10 max-w-[1320px] flex  items-center justify-center px-[50px] my-0 mx-auto w-full ">
-      <div className="flex flex-col lg:flex-row space-between items-start lg:items-center  gap-[40px] ">
+      <div className="flex flex-col lg:flex-row space-between items-start  gap-[40px] ">
         {/* Heading */}
         <div className="lg:max-w-[520px] w-full">
           <h1 className="mb-[24px] w-fit tracking-[-0.02em] font-normal text-[48px] sm:text-[64px] 2xl:text-[74px] leading-[120%] 2xl:leading-[110%] ">
