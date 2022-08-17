@@ -104,7 +104,11 @@ const LandingPage = () => {
     <div className="bg-white">
       <div className="home-img border-0 bg-no-repeat bg-cover h-[100vh] sm-mid-tablet:bg-bottom bg-right">
         <div className="sm:grid sm:grid-cols-10 sm:gap-3 md:gap-6 mx-auto max-w-screen-xl px-6 md:px-12">
-          <section className="col-span-10 lg:col-span-4 pt-[19%]">
+          <section
+            data-aos="fade-right"
+            data-aos-delay="440"
+            className="col-span-10 lg:col-span-4 pt-[19%]"
+          >
             <h1
               className={` text-[40px] sm:text-[42px] tracking-normal sm:tracking-[-0.015em] leading-[60px] ${styles.fontGazpacho} font-extrabold  mb-8 sm-mid-tablet:text-3xl sm-mid-tablet:leading-snug`}
             >
@@ -191,7 +195,7 @@ const LandingPage = () => {
             >
               Introducing Hirable
             </h3>
-            <p className="text-lg text-center  md:w-[70%] tracking-[-.015em] mb-8 leading-[1.875rem]">
+            <p className="text-lg text-center  md:max-w-[850px] tracking-[-.015em] mb-8 leading-[1.875rem]">
               Recent graduates want great jobs. Companies want great talent.
               Hirable enables collaboration between companies, universities and
               their students by creating an ecosystem of opportunities where
