@@ -1,15 +1,13 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
-import { useRouter } from 'next/router';
+import axios from 'axios';
 import Input from '../../components/common/Input';
 import classNames from '../../utils/constants/classNames';
 import InputError from '../../components/common/InputError';
-import InputMessage from '../../components/common/InputMessage';
 
 import 'react-phone-input-2/lib/style.css';
 
 const SignUp = () => {
-  const router = useRouter();
   const [next, setNext] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -25,7 +23,7 @@ const SignUp = () => {
     passwordError: '',
   });
   const { email, name, password } = data;
-  const { emailError, fNameError, passwordError, emailLoad } = errors;
+  const { emailError, fNameError, passwordError } = errors;
 
   // //////////////////ERRORS //////////////////
   const handleSetErrors = (field, value) =>
@@ -151,10 +149,40 @@ const SignUp = () => {
   function submitData() {
     setLoading(true);
     // console.log(data);
+    const invite = sessionStorage.getItem('invite');
+
+    sessionStorage.setItem('name', data.name);
+    sessionStorage.setItem('password', data.password);
     sessionStorage.setItem('email', data.email);
-    setTimeout(() => {
-      window.location.replace('/signup/verifyEmail');
-    }, 500);
+
+    const options = {
+      method: 'POST',
+      url: 'http://localhost:8080/api/v1/users',
+      data: {
+        email: data.email,
+        username: 'al',
+        name: data.name,
+        password: data.password,
+        ref: invite,
+      },
+    };
+
+    axios
+      .request(options)
+      .then((response) => {
+        // console.log(response.data.apiToken);
+        window.location.replace('/signup/verifyEmail');
+      })
+      .catch((error) => {
+        // console.log(error.response.status);
+        window.location.replace('/signup/verifyEmail');
+        if ((error.response.status = 400)) {
+          handleSetErrors('emailError', 'Email exists!, Please Login');
+        } else {
+          handleSetErrors('emailError', 'Invalid Email');
+        }
+        setLoading(false);
+      });
   }
 
   return (
@@ -211,12 +239,7 @@ const SignUp = () => {
                   placeholder="Enter Email Address"
                   type="email"
                 />
-                {emailLoad && (
-                  <InputMessage
-                    message={emailLoad}
-                    loading={emailLoad === 'Validating Email'}
-                  />
-                )}
+
                 {emailError && <InputError error={emailError} />}
               </div>
               <div className="relative">
