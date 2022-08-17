@@ -13,11 +13,12 @@ function Invite() {
     setInvite(e.target.value);
     if (invite.length === 5) {
       setCheckInvite(true);
+      sessionStorage.setItem('invite', invite);
       setTimeout(() => {
         setChecking(false);
         setTimeout(() => {
-          router.push('/signup');
-        }, 600);
+          window.location.replace('/signup');
+        }, 400);
       }, 1400);
     }
   }
