@@ -4,15 +4,27 @@ import BannerImage from '../../public/images/campus_ambassadors.png';
 
 const ImageDescription = () => {
   return (
-    <div>
-      {/* <Image
-        width={'100px'}
-        height={'100px'}
-        src={
-          'https://klasha.com/_next/image?url=https%3A%2F%2Fa.storyblok.com%2Ff%2F150782%2F1168x1000%2Fb15d949d0e%2Fcampus_ambassadors.png&w=1920&q=80'
-        }
-        alt="Banner"
-      /> */}
+    <div className=" max-w-full lg:max-w-[1320px] mx-auto px-8 lg:px-[50px] my-20 w-full ">
+      <div className="flex lg:flex-row flex-col justify-around items-start lg:items-center gap-6 lg:gap-[100px] ">
+        <div className="block mx-auto overflow-hidden bg-none ">
+          <Image
+            width={'584px'}
+            height={'500px'}
+            src={BannerImage}
+            className=""
+            alt="Banner"
+          />
+        </div>
+        <div>
+          <h2 className=" max-w-full lg:max-w-[456px] mb-2 lg:mb-6 font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] ">
+            Develop a skill set that will advance your career
+          </h2>
+          <p className=" max-w-full lg:max-w-[376px] text-base leading-[160%]">
+            Join your peers across various campuses in Africa to build relevant
+            skill sets via our task-oriented campus ambassador program.
+          </p>
+        </div>
+      </div>
     </div>
   );
 };
