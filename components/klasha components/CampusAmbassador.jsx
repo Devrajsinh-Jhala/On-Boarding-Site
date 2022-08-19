@@ -3,6 +3,8 @@ import HeroSection from './HeroSection';
 import ImageDescription from './ImageDescription';
 import RoleComponent from './RoleComponent';
 import Testimonials from './Testimonials';
+import NewGains from './NewGains';
+import Accordian from './Accordian';
 
 const CampusAmbassador = () => {
   return (
@@ -10,7 +12,9 @@ const CampusAmbassador = () => {
       <HeroSection />
       <ImageDescription />
       <Testimonials />
+      <NewGains />
       <RoleComponent />
+      <Accordian />
     </div>
   );
 };
