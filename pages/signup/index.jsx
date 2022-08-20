@@ -1,13 +1,18 @@
 import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import axios from 'axios';
+import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 import Input from '../../components/common/Input';
 import classNames from '../../utils/constants/classNames';
 import InputError from '../../components/common/InputError';
+import { setname, setemail, setpassword } from '../../store/slices/user';
 
 import 'react-phone-input-2/lib/style.css';
 
 const SignUp = () => {
+  const dispatch = useDispatch();
+  const router = useRouter();
   const [next, setNext] = useState(false);
   const [loading, setLoading] = useState(false);
 
@@ -148,12 +153,9 @@ const SignUp = () => {
 
   function submitData() {
     setLoading(true);
-    // console.log(data);
-    const invite = sessionStorage.getItem('invite');
-
-    sessionStorage.setItem('name', data.name);
-    sessionStorage.setItem('password', data.password);
-    sessionStorage.setItem('email', data.email);
+    dispatch(setname(data.name));
+    dispatch(setemail(data.email));
+    dispatch(setpassword(data.password));
 
     const options = {
       method: 'POST',
@@ -163,7 +165,7 @@ const SignUp = () => {
         username: 'al',
         name: data.name,
         password: data.password,
-        ref: invite,
+        // ref: invite,
       },
     };
 
@@ -171,11 +173,11 @@ const SignUp = () => {
       .request(options)
       .then((response) => {
         // console.log(response.data.apiToken);
-        window.location.replace('/signup/verifyEmail');
+        router.push('/signup/verifyEmail');
       })
       .catch((error) => {
         // console.log(error.response.status);
-        window.location.replace('/signup/verifyEmail');
+        router.push('/signup/verifyEmail');
         if ((error.response.status = 400)) {
           handleSetErrors('emailError', 'Email exists!, Please Login');
         } else {
