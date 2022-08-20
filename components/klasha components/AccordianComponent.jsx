@@ -21,13 +21,22 @@ const AccordianComponent = ({ question, answer }) => {
           <div>{isHidden ? <BsChevronDown /> : <BsChevronUp />}</div>
         </div>
         {/* Answer */}
-        <div
-          className={`h-auto  transition-[height] mb-6 duration-300 ${
-            isHidden ? 'hidden' : 'block'
-          } ease-linear `}
+        <Collapse
+          initialStyle={{
+            transition: 'height',
+            duration: '300ms',
+            transitionTimingFunction: 'ease-in-out',
+          }}
+          isOpened={true}
         >
-          <p className="mb-0 m-0 p-0 text-base leading-[160%] ">{answer}</p>
-        </div>
+          <div
+            className={`h-auto  transition-[height] mb-6 duration-500 ${
+              isHidden ? 'hidden' : 'block'
+            } ease-in-out `}
+          >
+            <p className="mb-0 m-0 p-0 text-base leading-[160%] ">{answer}</p>
+          </div>
+        </Collapse>
       </div>
     </div>
   );

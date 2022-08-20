@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/student.module.css';
 
 const AboutUs = () => {
   return (
@@ -6,7 +7,9 @@ const AboutUs = () => {
       <div className="flex flex-col lg:flex-row space-between items-start  gap-[40px] ">
         {/* Heading */}
         <div className="lg:max-w-[520px] w-full">
-          <h1 className="mb-[24px] w-fit tracking-[-0.02em] font-normal text-[48px] sm:text-[64px] 2xl:text-[74px] leading-[120%] 2xl:leading-[110%] ">
+          <h1
+            className={`mb-[24px] ${styles.fontGazpacho} font-medium w-fit tracking-[-0.02em]  text-[48px] sm:text-[64px] 2xl:text-[74px] leading-[120%] 2xl:leading-[110%] `}
+          >
             Borderless commerce for{' '}
             <span className="text-[#ef2c5a]">Africa</span>
           </h1>

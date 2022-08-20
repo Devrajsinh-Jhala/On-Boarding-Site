@@ -1,6 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import BannerImage from '../../public/images/campus_ambassadors.png';
+import styles from '../../styles/student.module.css';
 
 const ImageDescription = () => {
   return (
@@ -16,7 +17,9 @@ const ImageDescription = () => {
           />
         </div>
         <div>
-          <h2 className=" max-w-full lg:max-w-[456px] mb-2 lg:mb-6 font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] ">
+          <h2
+            className={` max-w-full ${styles.fontGazpacho} lg:max-w-[456px] mb-2 lg:mb-6 font-medium text-[40px] lg:text-[60px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
+          >
             Develop a skill set that will advance your career
           </h2>
           <p className=" max-w-full lg:max-w-[376px] text-base leading-[160%]">

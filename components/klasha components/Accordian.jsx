@@ -1,11 +1,14 @@
 import React from 'react';
 import AccordianComponent from './AccordianComponent';
+import styles from '../../styles/student.module.css';
 
 const Accordian = () => {
   return (
     <div className="my-20 pt-[144px] bg-white pb-[60px]">
       <div className="max-w-[1320px] mx-auto px-4 lg:px-[50px] w-full">
-        <h1 className="text-center mb-[60px] font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] ">
+        <h1
+          className={`text-center ${styles.fontGazpacho} mb-[60px] font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
+        >
           FAQs
         </h1>
         {/* Accordian */}

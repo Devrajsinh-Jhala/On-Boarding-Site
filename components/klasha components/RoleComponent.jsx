@@ -1,9 +1,12 @@
 import React from 'react';
+import styles from '../../styles/student.module.css';
 
 const RoleComponent = () => {
   return (
     <div className=" max-w-full lg:max-w-[1320px] mb-10 mx-auto px-4 lg:px-[50px] w-full ">
-      <h1 className="text-center max-w-[872px] mb-8 lg:mb-[60px] mx-auto font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] ">
+      <h1
+        className={`text-center max-w-[872px] ${styles.fontGazpacho} mb-8 lg:mb-[60px] mx-auto font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
+      >
         What will your role as a Klasha campus ambassador entail?
       </h1>
       <div className="flex lg:flex-row flex-col gap-0 lg:gap-[40px] ">

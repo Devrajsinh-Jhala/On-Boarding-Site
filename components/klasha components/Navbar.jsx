@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const Navbar = () => {
   const router = useRouter();
   const activeLink =
-    'text-[#0dbd8b] bg-[#fef1f0] rounded-full cursor-pointer block text-base leading-[1.6em] px-3 py-1 ';
+    'text-[#0dbd8b] bg-[#f3f1f0] rounded-full cursor-pointer block text-base leading-[1.6em] px-3 py-1 ';
 
   const normalLink =
     'block text-base text-black hover:text-[#0dbd8b] cursor-pointer leading-[1.6em] ';
@@ -22,11 +22,9 @@ const Navbar = () => {
               />
             </div>
           </Link>
-          <Link href="/colleges" passHref>
+          <Link href="/test" passHref>
             <a
-              className={
-                router.pathname === '/colleges' ? activeLink : normalLink
-              }
+              className={router.pathname === '/test' ? activeLink : normalLink}
             >
               Colleges
             </a>

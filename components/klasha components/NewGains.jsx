@@ -1,11 +1,14 @@
 import React from 'react';
 import { BsFillCalendarCheckFill } from 'react-icons/bs';
+import styles from '../../styles/student.module.css';
 
 const NewGains = () => {
   return (
     <div className="my-20 pt-[144px] pb-[60px]">
       <div className="max-w-[1320px] mx-auto px-4 lg:px-[50px] w-full">
-        <h1 className="text-center mb-[60px] font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] ">
+        <h1
+          className={`text-center mb-[60px] font-medium text-[40px] ${styles.fontGazpacho} lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
+        >
           What you stand to gain
         </h1>
         <div className="flex flex-wrap gap-10 justify-center box-border">
