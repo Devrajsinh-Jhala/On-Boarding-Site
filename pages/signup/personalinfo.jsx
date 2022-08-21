@@ -1,15 +1,23 @@
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/dist/client/router';
-
+import { useDispatch } from 'react-redux';
 import PhoneInput from 'react-phone-input-2';
 import InputMessage from '../../components/common/InputMessage';
 import classNames from '../../utils/constants/classNames';
 import Input from '../../components/common/Input';
 import InputError from '../../components/common/InputError';
 import 'react-phone-input-2/lib/style.css';
+import {
+  setUsername,
+  setEmail2,
+  setMobile,
+  setMobile2,
+  setAboutMe,
+} from '../../store/slices/user';
 
 const PersonalInfo = () => {
   const router = useRouter();
+  const dispatch = useDispatch();
   const [next, setNextpage] = useState(false);
 
   const [data, setData] = useState({
@@ -150,30 +158,12 @@ const PersonalInfo = () => {
     return () => clearTimeout(timeoutId);
   }, [username]);
 
-  useEffect(() => {
-    const u = sessionStorage.getItem('username');
-    const aE = sessionStorage.getItem('alternateEmail');
-    const m = sessionStorage.getItem('mobileNo');
-    const aM = sessionStorage.getItem('altMobileNo');
-    const a = sessionStorage.getItem('about');
-    if (u) {
-      setData({
-        username: u,
-        alternateEmail: aE,
-        mobileNo: m,
-        altMobileNo: aM,
-        about: a,
-      });
-    }
-  }, []);
-
   function nextPage() {
-    // console.log(username, alternateEmail, mobileNo, altMobileNo, about);
-    sessionStorage.setItem('username', username);
-    sessionStorage.setItem('alternateEmail', alternateEmail);
-    sessionStorage.setItem('mobileNo', mobileNo);
-    sessionStorage.setItem('altMobileNo', altMobileNo);
-    sessionStorage.setItem('about', about);
+    dispatch(setUsername(username));
+    dispatch(setEmail2(alternateEmail));
+    dispatch(setMobile(mobileNo));
+    dispatch(setMobile2(altMobileNo));
+    dispatch(setAboutMe(about));
 
     setTimeout(() => {
       // window.location.replace('');

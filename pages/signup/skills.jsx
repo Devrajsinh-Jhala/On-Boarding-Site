@@ -1,10 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
+import { useDispatch } from 'react-redux';
 import classNames from '../../utils/constants/classNames';
+import { setSkills } from '../../store/slices/user';
 
 const Skills = () => {
-  const [skills, setSkills] = useState([]);
+  const dispatch = useDispatch();
+  const [skills, setNewSkills] = useState([]);
   const router = useRouter();
 
   const [dataSet, setDataSet] = useState([
@@ -56,7 +59,7 @@ const Skills = () => {
     const temp = [...skills];
     if (index >= 0) {
       temp.splice(index, 1);
-      setSkills(temp);
+      setNewSkills(temp);
       setInputValue('');
       setAutocomplete({
         disabled: true,
@@ -68,7 +71,7 @@ const Skills = () => {
     for (let i = 0; i < dataSet.length; i++) {
       if (dataSet[i].name === itemName && totalSelectedItems < 7) {
         temp.push(itemName);
-        setSkills(temp);
+        setNewSkills(temp);
         flag = 1;
         break;
       }
@@ -76,7 +79,7 @@ const Skills = () => {
     }
     if (flag === 0) {
       temp.push(itemName);
-      setSkills(temp);
+      setNewSkills(temp);
       const newData = [...dataSet];
       newData.push({ name: itemName });
 
@@ -111,75 +114,14 @@ const Skills = () => {
       });
     }
   };
-  useEffect(() => {
-    let s = sessionStorage.getItem('skills');
-    if (s) {
-      s = s.split(',');
-      setSkills(s);
-    }
-  }, []);
+
   const handleSubmit = () => {
     // console.log(skills);
-    sessionStorage.setItem('skills', skills);
+    dispatch(setSkills(skills));
 
     setTimeout(() => {
-      window.location.replace('/signup/connect');
-      // router.push('/signup/connect');
+      router.push('/signup/connect');
     }, 500);
-
-    // // page 1
-    // const invite = sessionStorage.getItem('invite');
-    // // page 2
-    // const name = sessionStorage.getItem('name');
-    // const password = sessionStorage.getItem('password');
-    // const email = sessionStorage.getItem('email');
-    // // page 4
-    // const location = sessionStorage.getItem('location');
-    // const timezone = sessionStorage.getItem('timezones');
-    // // page 5
-    // const college = sessionStorage.getItem('college');
-    // const degree = sessionStorage.getItem('degree');
-    // const graduationYear = sessionStorage.getItem('graduationYear');
-    // const major = sessionStorage.getItem('major');
-    // // page 6
-    // const username = sessionStorage.getItem('username');
-    // const alternateEmail = sessionStorage.getItem('alternateEmail');
-    // const mobileNo = sessionStorage.getItem('mobileNo');
-    // const altMobileNo = sessionStorage.getItem('altMobileNo');
-    // const about = sessionStorage.getItem('about');
-    // // page 7
-    // const roles = sessionStorage.getItem('roles');
-    // // page 8
-    // const experience = sessionStorage.getItem('experience');
-    // // page 9
-    // const skills = sessionStorage.getItem('skills');
-
-    // console.log(
-    //   'invite : ',
-    //   invite,
-    //   '\nname: ',
-    //   name,
-    //   '\nemail: ',
-    //   email,
-    //   '\npassword: ',
-    //   password,
-    //   'location',
-    //   location,
-    //   'timezone',
-    //   timezone,
-    //   college,
-    //   graduationYear,
-    //   degree,
-    //   major,
-    //   username,
-    //   alternateEmail,
-    //   mobileNo,
-    //   altMobileNo,
-    //   about,
-    //   roles,
-    //   experience,
-    //   skills
-    // );
   };
 
   return (

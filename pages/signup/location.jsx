@@ -1,15 +1,20 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
-import Link from 'next/link';
 import { useRouter } from 'next/router';
 import ReactFlagsSelect from 'react-flags-select';
-
+import { useSelector, useDispatch } from 'react-redux';
 import timezones from '../../utils/constants/zones';
 import classNames from '../../utils/constants/classNames';
+import { setLocation, setTimezones } from '../../store/slices/user';
 
 const Location = () => {
-  const [currentTimezone, setCurrentTimezone] = useState('');
-  const [countrySelected, setCountrySelected] = useState('');
+  const dispatch = useDispatch();
+  const [currentTimezone, setCurrentTimezone] = useState(
+    useSelector((state) => state.user.timezones)
+  );
+  const [countrySelected, setCountrySelected] = useState(
+    useSelector((state) => state.user.location)
+  );
   const router = useRouter();
 
   const [displayTimezoneMenu, setDisplayTimezoneMenu] = useState(false);
@@ -70,22 +75,11 @@ const Location = () => {
     }
   }, [countrySelected]);
 
-  useEffect(() => {
-    const c = sessionStorage.getItem('location');
-    const t = sessionStorage.getItem('timezones');
-    if (c && t) {
-      setCountrySelected(c);
-      setCurrentTimezone(t);
-    }
-  }, []);
-
   function nextPage() {
-    // console.log(currentTimezone, countrySelected);
-    sessionStorage.setItem('location', countrySelected);
-    sessionStorage.setItem('timezones', currentTimezone);
+    dispatch(setTimezones(currentTimezone));
+    dispatch(setLocation(countrySelected));
 
     setTimeout(() => {
-      // window.location.replace('/signup/graduation');
       router.push('/signup/graduation');
     }, 500);
   }

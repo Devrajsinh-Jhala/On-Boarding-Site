@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import Link from 'next/dist/client/link';
 import { useSelector } from 'react-redux';
+import { useRouter } from 'next/router';
 import classNames from '../../utils/constants/classNames';
 import Input from '../../components/common/Input';
 import InputMessage from '../../components/common/InputMessage';
@@ -8,6 +9,7 @@ import InputError from '../../components/common/InputError';
 
 const Interests = () => {
   const [otp, setOtp] = useState({ isEnabled: false, otpData: '' });
+  const router = useRouter();
   const { isEnabled, otpData } = otp;
   const [email] = useState(useSelector((state) => state.user.email));
   const [errors, setErrors] = useState({
@@ -31,7 +33,7 @@ const Interests = () => {
       setTimeout(() => {
         // handleSetErrors('otpError', 'Invalid OTP !');
         handleSetErrors('otpLoad', 'OTP Validated');
-        window.location.replace('/signup/location');
+        router.push('/signup/location');
       }, 5000);
       // import('../../utils/apis/auth').then(({ verifyOtp }) => {
       //   verifyOtp(otpData, email)
