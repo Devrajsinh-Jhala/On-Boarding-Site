@@ -3,7 +3,7 @@ import styles from '../../styles/student.module.css';
 
 const AboutUs = () => {
   return (
-    <div className="mt-10 max-w-[1320px] flex  items-center justify-center px-[50px] my-0 mx-auto w-full ">
+    <div className="mt-24 max-w-[1320px] flex  items-center justify-center px-[50px] my-0 mx-auto w-full ">
       <div className="flex flex-col lg:flex-row space-between items-start  gap-[40px] ">
         {/* Heading */}
         <div className="lg:max-w-[520px] w-full">

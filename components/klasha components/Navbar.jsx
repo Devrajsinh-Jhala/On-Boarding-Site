@@ -5,14 +5,14 @@ import { useRouter } from 'next/router';
 const Navbar = () => {
   const router = useRouter();
   const activeLink =
-    'text-[#0dbd8b] bg-[#f3f1f0] rounded-full cursor-pointer block text-base leading-[1.6em] px-3 py-1 ';
+    'text-[#0dbd8b] bg-[#ace1af] text-sm rounded-full cursor-pointer block text-base leading-[1.6em] px-3 py-1 ';
 
   const normalLink =
     'block text-base text-black hover:text-[#0dbd8b] cursor-pointer leading-[1.6em] ';
   return (
-    <div className="z-10  shadow-md w-full sticky top-0 left-0">
-      <div className="md:flex  items-center justify-between bg-white py-7 md:px-12">
-        <div className="md:flex items-center justify-start space-x-10">
+    <div className="z-10 text-sm shadow-md w-full sticky top-0 left-0">
+      <div className="md:flex  items-center justify-between bg-white py-5 md:px-12">
+        <div className="md:flex text-sm items-center justify-start space-x-10">
           <Link href="/" passHref>
             <div className="cursor-pointer">
               <img
@@ -26,7 +26,7 @@ const Navbar = () => {
             <a
               className={router.pathname === '/test' ? activeLink : normalLink}
             >
-              Colleges
+              <p className="text-sm">Colleges</p>
             </a>
           </Link>
           <Link href="/students" passHref>
@@ -35,14 +35,14 @@ const Navbar = () => {
                 router.pathname === '/students' ? activeLink : normalLink
               }
             >
-              Students
+              <p className="text-sm">Students</p>
             </a>
           </Link>
           <Link href="/login" passHref>
             <a
               className={router.pathname === '/login' ? activeLink : normalLink}
             >
-              Login
+              <p className="text-sm">Login</p>
             </a>
           </Link>
         </div>
@@ -50,7 +50,7 @@ const Navbar = () => {
           <button
             type="button"
             // onClick={() => setSignup(true)}
-            className="font-semibold text-base flex px-6 py-2 h-[2.375rem] justify-center items-center rounded-4xl bg-[#0dbd8b] text-white"
+            className="font-semibold text-sm flex px-6 py-2 h-[2.375rem] justify-center items-center rounded-4xl bg-[#0dbd8b] text-white"
           >
             Sign Up
           </button>

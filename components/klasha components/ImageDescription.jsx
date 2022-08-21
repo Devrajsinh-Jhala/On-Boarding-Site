@@ -18,7 +18,7 @@ const ImageDescription = () => {
         </div>
         <div>
           <h2
-            className={` max-w-full ${styles.fontGazpacho} lg:max-w-[456px] mb-2 lg:mb-6 font-medium text-[40px] lg:text-[60px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
+            className={` max-w-full ${styles.fontGazpacho} lg:max-w-[456px] mb-2 lg:mb-6 font-bold text-[30px] leading-[1.3em] sm-mid-tablet:leading-snug antialiased tracking-[-1px] `}
           >
             Develop a skill set that will advance your career
           </h2>
