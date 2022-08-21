@@ -8,8 +8,6 @@ import classNames from '../../utils/constants/classNames';
 import InputError from '../../components/common/InputError';
 import { setname, setemail, setpassword } from '../../store/slices/user';
 
-import 'react-phone-input-2/lib/style.css';
-
 const SignUp = () => {
   const dispatch = useDispatch();
   const router = useRouter();
