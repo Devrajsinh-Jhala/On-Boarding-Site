@@ -1,13 +1,15 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
-import Link from 'next/link';
+import { useDispatch } from 'react-redux';
 import Error from '../../components/common/InputError';
 import classNames from '../../utils/constants/classNames';
+import { setRoles } from '../../store/slices/user';
 
 const Interests = () => {
+  const dispatch = useDispatch();
   const [next, setNextpage] = useState(false);
-  const [roles, setRoles] = useState([]);
+  const [roles, setNewRoles] = useState([]);
   const router = useRouter();
   const [dataSet, setDataSet] = useState([
     { name: 'Community Manager' },
@@ -46,7 +48,7 @@ const Interests = () => {
 
     if (index >= 0) {
       temp.splice(index, 1);
-      setRoles(temp);
+      setNewRoles(temp);
       setInputValue('');
       setAutocomplete({
         disabled: true,
@@ -59,7 +61,7 @@ const Interests = () => {
     for (let i = 0; i < dataSet.length; i++) {
       if (dataSet[i].name === itemName && totalSelectedItems < 7) {
         temp.push(itemName);
-        setRoles(temp);
+        setNewRoles(temp);
         flag = 1;
         break;
       }
@@ -67,7 +69,7 @@ const Interests = () => {
     }
     if (flag === 0) {
       temp.push(itemName);
-      setRoles(temp);
+      setNewRoles(temp);
       const newData = [...dataSet];
       newData.push({ name: itemName });
 
@@ -124,19 +126,11 @@ const Interests = () => {
     otpLoad: '',
   });
   useEffect(() => checkErrorsExist(), [roles]);
-  useEffect(() => {
-    let r = sessionStorage.getItem('roles');
-    if (r) {
-      r = r.split(',');
-      setRoles(r);
-    }
-  }, []);
   function nextPage() {
     // console.log(roles);
-    sessionStorage.setItem('roles', roles);
+    dispatch(setRoles(roles));
 
     setTimeout(() => {
-      // window.location.replace('');
       router.push('/signup/experience');
     }, 500);
   }

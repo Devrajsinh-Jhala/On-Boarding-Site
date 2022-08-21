@@ -1,7 +1,7 @@
 import '../styles/globals.css';
 import '../styles/animations.css';
 import { Provider } from 'react-redux';
-import { store } from '../redux/store';
+import store from '../store';
 
 function App({ Component, pageProps }) {
   return (

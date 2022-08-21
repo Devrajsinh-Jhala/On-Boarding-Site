@@ -1,13 +1,19 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useState, useEffect } from 'react';
 import { useRouter } from 'next/dist/client/router';
-
-import Link from 'next/dist/client/link';
+import { useDispatch } from 'react-redux';
 import classNames from '../../utils/constants/classNames';
 import Input from '../../components/common/Input';
 import InputError from '../../components/common/InputError';
+import {
+  setCollege,
+  setGraduationYear,
+  setDegree,
+  setMajor,
+} from '../../store/slices/user';
 
 const Graduation = () => {
+  const dispatch = useDispatch();
   const [next, setNextpage] = useState(false);
   const [data, setData] = useState({
     college: '',
@@ -116,31 +122,15 @@ const Graduation = () => {
     setTimeout(() => handleErrors(e.target.name, e.target.value), 100);
   };
   useEffect(() => checkErrorsExist(), [data]);
-  useEffect(() => {
-    const c = sessionStorage.getItem('college');
-    const d = sessionStorage.getItem('degree');
-    const g = sessionStorage.getItem('graduationYear');
-    const m = sessionStorage.getItem('major');
-    if (c && d && g && m) {
-      setData({
-        college: c,
-        graduationYear: d,
-        degree: g,
-        major: m,
-      });
-    }
-  }, []);
 
   const router = useRouter();
   function nextPage() {
-    // console.log(college, degree, graduationYear, major);
-    sessionStorage.setItem('college', college);
-    sessionStorage.setItem('degree', degree);
-    sessionStorage.setItem('graduationYear', graduationYear);
-    sessionStorage.setItem('major', major);
+    dispatch(setCollege(college));
+    dispatch(setGraduationYear(graduationYear));
+    dispatch(setDegree(degree));
+    dispatch(setMajor(major));
 
     setTimeout(() => {
-      // window.location.replace('');
       router.push('/signup/personalinfo');
     }, 500);
   }

@@ -1,10 +1,13 @@
 /* eslint-disable react/no-array-index-key */
 import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/dist/client/router';
+import { useDispatch } from 'react-redux';
 import classNames from '../../utils/constants/classNames';
+import { setExperiences } from '../../store/slices/user';
 
 const Experience = () => {
-  const [experience, setExperience] = useState([]);
+  const dispatch = useDispatch();
+  const [experience, setNewExperience] = useState([]);
   const router = useRouter();
 
   const [dataSet, setDataSet] = useState([
@@ -50,7 +53,7 @@ const Experience = () => {
     const temp = [...experience];
     if (index >= 0) {
       temp.splice(index, 1);
-      setExperience(temp);
+      setNewExperience(temp);
       setInputValue('');
       setAutocomplete({
         disabled: true,
@@ -62,7 +65,7 @@ const Experience = () => {
     for (let i = 0; i < dataSet.length; i++) {
       if (dataSet[i].name === itemName && totalSelectedItems < 7) {
         temp.push(itemName);
-        setExperience(temp);
+        setNewExperience(temp);
         flag = 1;
         break;
       }
@@ -70,7 +73,7 @@ const Experience = () => {
     }
     if (flag === 0) {
       temp.push(itemName);
-      setExperience(temp);
+      setNewExperience(temp);
       const newData = [...dataSet];
       newData.push({ name: itemName });
 
@@ -106,19 +109,11 @@ const Experience = () => {
     }
   };
 
-  useEffect(() => {
-    let e = sessionStorage.getItem('experience');
-    if (e) {
-      e = e.split(',');
-      setExperience(e);
-    }
-  }, []);
   function nextPage() {
     // console.log(experience);
-    sessionStorage.setItem('experience', experience);
+    dispatch(setExperiences(experience));
 
     setTimeout(() => {
-      // window.location.replace('');
       router.push('/signup/skills');
     }, 500);
   }

@@ -1,30 +1,40 @@
 import React, { useState, useEffect } from 'react';
+import { useDispatch } from 'react-redux';
 import { useRouter } from 'next/router';
-// import InputError from '../components/common/InputError';
+import InputError from '../components/common/InputError';
 import InputMessage from '../components/common/InputMessage';
+import { invite } from '../store/slices/user';
 
 function Invite() {
-  const router = useRouter();
-  const [invite, setInvite] = useState('');
+  const dispatch = useDispatch();
+  const [inviteCode, setInviteCode] = useState('');
   const [checkInvite, setCheckInvite] = useState(false);
   const [checking, setChecking] = useState(true);
+  const [error, setError] = useState(false);
+  const router = useRouter();
 
-  function handleInvite(e) {
-    setInvite(e.target.value);
-    if (invite.length === 5) {
-      setCheckInvite(true);
-      sessionStorage.setItem('invite', invite);
-      setTimeout(() => {
-        setChecking(false);
-        setTimeout(() => {
-          window.location.replace('/signup');
-        }, 400);
-      }, 1400);
-    }
-  }
   useEffect(() => {
     document.querySelector('#inviteCode').focus();
   }, []);
+
+  function checkInvitCode() {
+    if (inviteCode.length === 6) {
+      console.log(inviteCode);
+      if (error) {
+        setError(false);
+      }
+      setCheckInvite(true);
+      setTimeout(() => {
+        setChecking(false);
+        setTimeout(() => {
+          dispatch(invite(inviteCode));
+          router.push('/signup');
+        }, 400);
+      }, 1400);
+    } else {
+      setError(true);
+    }
+  }
 
   return (
     <>
@@ -85,8 +95,8 @@ function Invite() {
                   </div>
                   <input
                     id="inviteCode"
-                    onChange={handleInvite}
-                    value={invite}
+                    onChange={(e) => setInviteCode(e.target.value)}
+                    value={inviteCode}
                     className=" w-full overflow-hidden sm:w-[200px] leading-[1.3rem] text-[14px] mt-5 tracking-[-0.015em] font-inter pl-[15px] border border-gray-400 rounded-lg mb-2  focus:outline-none py-[15px] h-[43px] "
                     type="text"
                     name="invite"
@@ -96,14 +106,15 @@ function Invite() {
                   {checkInvite && (
                     <InputMessage message="checking" loading={checking} />
                   )}
-                  {/* {emailError && <InputError error={emailError} />} */}
-                  {/* <Link href="/signup">
-                    <a>
-                      <div className="mt-5 font-inter hover:bg-slate-700 bg-black hidden sm:block text-white rounded-md  text-[0.9rem] p-[0.7rem] font-semibold cursor-pointer absolute px-[1.5rem]">
-                        Unlock Access
-                      </div>
-                    </a>
-                  </Link> */}
+                  {error && <InputError error="Invalid Invite Code" />}
+
+                  <button
+                    type="button"
+                    onClick={checkInvitCode}
+                    className="mt-5 font-inter hover:bg-slate-700 bg-black hidden sm:block text-white rounded-md  text-[0.9rem] p-[0.7rem] font-semibold cursor-pointer absolute px-[1.5rem]"
+                  >
+                    Unlock Access
+                  </button>
                 </div>
               </div>
             </div>
