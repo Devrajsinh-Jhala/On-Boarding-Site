@@ -1,16 +1,17 @@
 import React from 'react';
 import Image from 'next/image';
-import BannerImage from '../../public/images/campus_ambassadors.png';
+// import BannerImage from '../../public/images/campus_ambassadors.png';
+import BannerImage from '../../public/images/cheerful-university-students-with-study-books-look-down_88138-583.jpg';
 import styles from '../../styles/student.module.css';
 
 const ImageDescription = () => {
   return (
     <div className=" max-w-full lg:max-w-[1320px] mx-auto px-8 lg:px-[50px] my-20 w-full ">
-      <div className="flex lg:flex-row flex-col justify-around items-start lg:items-center gap-6 lg:gap-[100px] ">
+      <div className="flex lg:flex-row flex-col justify-around items-start lg:items-center gap-6 lg:gap-[70px] ">
         <div className="block mx-auto overflow-hidden bg-none ">
           <Image
-            width={'584px'}
-            height={'500px'}
+            width={'482px'}
+            height={'270px'}
             src={BannerImage}
             className=""
             alt="Banner"
@@ -23,8 +24,11 @@ const ImageDescription = () => {
             Develop a skill set that will advance your career
           </h2>
           <p className=" max-w-full lg:max-w-[376px] text-base leading-[160%]">
-            Join your peers across various campuses in Africa to build relevant
-            skill sets via our task-oriented campus ambassador program.
+            If you are a passionate individual with ambitious dreams and would
+            like to work with talented and passionate students across the world,
+            then this could be the right break for you. Empower your peers to
+            meet their professional goals, while you develop essential skills
+            for leadership, communication, and marketing.
           </p>
         </div>
       </div>

@@ -13,10 +13,10 @@ const HeroSection = () => {
 
         {/* Description */}
         <p className=" max-w-full  lg:max-w-[520px] mx-auto mb-10 text-base 2xl:text-lg leading-[180%] ">
-          The Klasha Campus Ambassador Programme provides an excellent
-          opportunity for students in tertiary institutions across Africa to be
-          part of the Klasha family and join our mission to build borderless
-          payments for commerce in Africa.
+          The Hirable Campus Ambassador Programme provides an excellent
+          opportunity for students across the world to be part of the Hirable
+          family and join our mission to create an ecosystem of opportunities
+          for students.
         </p>
 
         <div className=" inline-flex lg:flex items-center justify-center">

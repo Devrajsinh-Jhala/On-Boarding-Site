@@ -18,11 +18,11 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
-              Monthly Payment
+              Rewards and Incentives
             </h3>
             <p className="text-base lg:max-w-[352px] xl:max-w-[472px] leading-[160%] ">
-              Our campus ambassadors earn monthly bonuses and data
-              subscriptions.
+              Get monthly bonuses, performance-based rewards and a 'Rockstar'
+              certificate for high performing campus ambassadors.
             </p>
           </div>
           <div className=" p-[32px] lg:p-[48px] block box-border bg-white border-[1px] border-black rounded-[8px] flex-grow lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[520px]  ">
@@ -31,11 +31,11 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
-              Monthly Payment
+              Network with the Industry's Best
             </h3>
             <p className="text-base lg:max-w-[352px]   xl:max-w-[472px]  leading-[160%] ">
-              Our campus ambassadors earn monthly bonuses and data
-              subscriptions.
+              Get direct exposure to the corporate world and a chance to build
+              meaningful connections for your professional network.
             </p>
           </div>
           <div className=" p-[32px] lg:p-[48px] block box-border bg-white border-[1px] border-black rounded-[8px] flex-grow lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[520px]  ">
@@ -44,11 +44,11 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
-              Monthly Payment
+              One of a kind Mentorship Program
             </h3>
             <p className="text-base lg:max-w-[352px]   xl:max-w-[472px]  leading-[160%] ">
-              Our campus ambassadors earn monthly bonuses and data
-              subscriptions.
+              An opportunity to be mentored by leading professionals at top
+              companies to expand your skillset and grow your ingenuity.
             </p>
           </div>
           <div className=" p-[32px] lg:p-[48px] block box-border bg-white border-[1px] border-black rounded-[8px] flex-grow lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[520px] ">
@@ -57,11 +57,11 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
-              Monthly Payment
+              Career Support
             </h3>
             <p className="text-base  lg:max-w-[352px]  xl:max-w-[472px]  leading-[160%] ">
-              Our campus ambassadors earn monthly bonuses and data
-              subscriptions.
+              Develop intellectual, leadership, and creative skills. Become an
+              industry ready professional.
             </p>
           </div>
           <div className=" p-[32px] lg:p-[48px] block box-border bg-white border-[1px] border-black rounded-[8px] flex-grow lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[520px] ">
@@ -70,11 +70,11 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
-              Monthly Payment
+              Experience Credits
             </h3>
             <p className="text-base lg:max-w-[352px] xl:max-w-[472px]  leading-[160%] ">
-              Our campus ambassadors earn monthly bonuses and data
-              subscriptions.
+              Outstanding performers willget experience to work with emerging
+              startups and gain work experience.
             </p>
           </div>
           <div className=" p-[32px] lg:p-[48px] block box-border bg-white border-[1px] border-black rounded-[8px] flex-grow lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[520px] ">
@@ -83,11 +83,11 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
-              Monthly Payment
+              Global Community
             </h3>
             <p className="text-base lg:max-w-[352px]  xl:max-w-[472px]  leading-[160%] ">
-              Our campus ambassadors earn monthly bonuses and data
-              subscriptions.
+              Network and collaborate with other ambassadors from various
+              universities across the world.
             </p>
           </div>
         </div>

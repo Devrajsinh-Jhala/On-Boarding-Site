@@ -7,42 +7,43 @@ const RoleComponent = () => {
       <h1
         className={`text-center max-w-[872px] ${styles.fontGazpacho} mb-8 lg:mb-[60px] mx-auto font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
       >
-        What will your role as a Klasha campus ambassador entail?
+        What will your role as a Hirable campus ambassador entail?
       </h1>
       <div className="flex lg:flex-row flex-col gap-0 lg:gap-[40px] ">
         <div className="bg-white mt-6 lg:mt-0 border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
           <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
-            Invitation
+            Learn
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">
-            Invite friends, family and colleagues to create and maintain a
-            Klasha account and win cash rewards.
+            Learn from the best to maximize your strengths and develop sales and
+            marketing skills.
           </p>
         </div>
         <div className="bg-white mt-6 lg:mt-0  border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
           <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
-            Opportunities
+            Brainstrom
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">
-            Identify trends and opportunities that Klasha can take advantage of
-            on-campus.
+            Put your thinking cap on and come up with out-of-the-box ideas to
+            work towards the implementation of ideas.
           </p>
         </div>
         <div className="bg-white mt-6 lg:mt-0  border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
           <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
-            Promotion
+            Spearhead
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">
-            Learn about Klasha's products and services, and promote their use on
-            campus.
+            Represent Hirable in your campus and promote our new edtech products
+            and offerings.
           </p>
         </div>
         <div className="bg-white mt-6 lg:mt-0  border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
           <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
-            Image
+            Grow
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">
-            Represent the Klasha brand on campus.
+            Spread the word and let the student community know the ideas and
+            product offering by Hirable.
           </p>
         </div>
       </div>
