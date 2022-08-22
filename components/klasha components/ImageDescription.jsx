@@ -10,8 +10,8 @@ const ImageDescription = () => {
       <div className="flex lg:flex-row flex-col justify-around items-start lg:items-center gap-6 lg:gap-[70px] ">
         <div className="block mx-auto overflow-hidden bg-none ">
           <Image
-            width={'482px'}
-            height={'270px'}
+            width={'500px'}
+            height={'390px'}
             src={BannerImage}
             className=""
             alt="Banner"
@@ -23,7 +23,7 @@ const ImageDescription = () => {
           >
             Develop a skill set that will advance your career
           </h2>
-          <p className=" max-w-full lg:max-w-[376px] text-base leading-[160%]">
+          <p className=" max-w-full lg:max-w-[376px] text-lg tracking-[-0.015em] leading-[1.875rem]">
             If you are a passionate individual with ambitious dreams and would
             like to work with talented and passionate students across the world,
             then this could be the right break for you. Empower your peers to

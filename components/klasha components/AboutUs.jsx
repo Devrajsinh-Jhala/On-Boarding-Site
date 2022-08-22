@@ -13,20 +13,20 @@ const AboutUs = () => {
             Establishing a new way of{' '}
             <span className="text-[#ef2c5a]">learning</span>
           </h1>
-          <div className="mt-5 text-center py-4 lg:px-7 px-6 lg:text-base text-sm inline-block cursor-pointer bg-black hover:bg-[#ef2c5a] text-white rounded-[8px] ">
+          {/* <div className="mt-5 text-center py-4 lg:px-7 px-6 lg:text-base text-sm inline-block cursor-pointer bg-black hover:bg-[#ef2c5a] text-white rounded-[8px] ">
             Read about our culture
-          </div>
+          </div> */}
         </div>
         {/* Information */}
         <div className="lg:max-w-[560px] w-full">
-          <p className="2xl:text-lg font-normal text-base leading-[180%] ">
+          <p className="text-lg tracking-[-0.015em] leading-[1.875rem] ">
             For those first steps into the proessional world, through to
             important descisions you'll make about your career, your
             professional relationships, and about pursuing your dreams and
             goals, we are here to connect every student experience and every
             student interest to an opportunity.
           </p>
-          <p className="2xl:text-lg font-normal mt-6 mb-10 text-base leading-[180%]">
+          <p className="text-lg tracking-[-0.015em] leading-[1.875rem] mt-6">
             We're a mission-driven tech platform aimed at making students dreams
             come true by creating an ecosystem of opportunities. We're breaking
             down an old system and building a better one. It takes a whole

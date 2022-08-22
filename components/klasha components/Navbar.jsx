@@ -5,7 +5,7 @@ import { useRouter } from 'next/router';
 const Navbar = () => {
   const router = useRouter();
   const activeLink =
-    'text-[#0dbd8b] bg-[#ace1af] text-sm rounded-full cursor-pointer block text-base leading-[1.6em] px-3 py-1 ';
+    'text-[#013220] bg-[#ace1af] text-sm rounded-full cursor-pointer block text-base leading-[1.6em] px-3 py-1 ';
 
   const normalLink =
     'block text-base text-black hover:text-[#0dbd8b] cursor-pointer leading-[1.6em] ';

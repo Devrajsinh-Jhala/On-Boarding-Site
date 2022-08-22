@@ -11,7 +11,9 @@ const RoleComponent = () => {
       </h1>
       <div className="flex lg:flex-row flex-col gap-0 lg:gap-[40px] ">
         <div className="bg-white mt-6 lg:mt-0 border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
-          <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
+          <p
+            className={`font-medium ${styles.fontGazpacho} w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] `}
+          >
             Learn
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">
@@ -20,7 +22,9 @@ const RoleComponent = () => {
           </p>
         </div>
         <div className="bg-white mt-6 lg:mt-0  border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
-          <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
+          <p
+            className={`font-medium ${styles.fontGazpacho} w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] `}
+          >
             Brainstrom
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">
@@ -29,7 +33,9 @@ const RoleComponent = () => {
           </p>
         </div>
         <div className="bg-white mt-6 lg:mt-0  border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
-          <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
+          <p
+            className={`font-medium ${styles.fontGazpacho} w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] `}
+          >
             Spearhead
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">
@@ -38,7 +44,9 @@ const RoleComponent = () => {
           </p>
         </div>
         <div className="bg-white mt-6 lg:mt-0  border-[1px] border-black rounded-[8px] p-8 lg:p-10 flex-grow  lg:flex-grow-0 flex-shrink basis-[100%] lg:basis-[22%] ">
-          <p className="font-normal w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] ">
+          <p
+            className={`font-medium ${styles.fontGazpacho} w-[182px] tracking-[-0.02em] mb-[8px] text-[24px] leading-[133%] `}
+          >
             Grow
           </p>
           <p className="text-base lg:w-[182px] leading-[160%] ">

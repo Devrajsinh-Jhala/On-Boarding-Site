@@ -12,7 +12,7 @@ const HeroSection = () => {
         </h1>
 
         {/* Description */}
-        <p className=" max-w-full  lg:max-w-[520px] mx-auto mb-10 text-base 2xl:text-lg leading-[180%] ">
+        <p className=" max-w-full text-center lg:max-w-[850px] mx-auto mb-10 text-lg tracking-[-0.015em] leading-[1.875rem] ">
           The Hirable Campus Ambassador Programme provides an excellent
           opportunity for students across the world to be part of the Hirable
           family and join our mission to create an ecosystem of opportunities

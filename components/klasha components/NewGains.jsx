@@ -17,10 +17,12 @@ const NewGains = () => {
             <div className="align-top max-w-full text-2xl mb-6 object-cover ">
               <BsFillCalendarCheckFill />
             </div>
-            <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
+            <h3
+              className={`mb-2 font-medium text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+            >
               Rewards and Incentives
             </h3>
-            <p className="text-base lg:max-w-[352px] xl:max-w-[472px] leading-[160%] ">
+            <p className="text-base lg:max-w-[352px] leading-[160%] ">
               Get monthly bonuses, performance-based rewards and a 'Rockstar'
               certificate for high performing campus ambassadors.
             </p>
@@ -30,10 +32,12 @@ const NewGains = () => {
             <div className="align-top max-w-full text-2xl mb-6 object-cover ">
               <BsFillCalendarCheckFill />
             </div>
-            <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
+            <h3
+              className={`mb-2 font-medium lg:max-w-[352px] text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+            >
               Network with the Industry's Best
             </h3>
-            <p className="text-base lg:max-w-[352px]   xl:max-w-[472px]  leading-[160%] ">
+            <p className="text-base lg:max-w-[352px] leading-[160%] ">
               Get direct exposure to the corporate world and a chance to build
               meaningful connections for your professional network.
             </p>
@@ -43,10 +47,12 @@ const NewGains = () => {
             <div className="align-top max-w-full text-2xl mb-6 object-cover ">
               <BsFillCalendarCheckFill />
             </div>
-            <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
+            <h3
+              className={`mb-2 font-medium lg:max-w-[352px] text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+            >
               One of a kind Mentorship Program
             </h3>
-            <p className="text-base lg:max-w-[352px]   xl:max-w-[472px]  leading-[160%] ">
+            <p className="text-base lg:max-w-[352px] leading-[160%] ">
               An opportunity to be mentored by leading professionals at top
               companies to expand your skillset and grow your ingenuity.
             </p>
@@ -56,10 +62,12 @@ const NewGains = () => {
             <div className="align-top max-w-full text-2xl mb-6 object-cover ">
               <BsFillCalendarCheckFill />
             </div>
-            <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
+            <h3
+              className={`mb-2 font-medium lg:max-w-[352px] text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+            >
               Career Support
             </h3>
-            <p className="text-base  lg:max-w-[352px]  xl:max-w-[472px]  leading-[160%] ">
+            <p className="text-base  lg:max-w-[352px] leading-[160%] ">
               Develop intellectual, leadership, and creative skills. Become an
               industry ready professional.
             </p>
@@ -69,10 +77,12 @@ const NewGains = () => {
             <div className="align-top max-w-full text-2xl mb-6 object-cover ">
               <BsFillCalendarCheckFill />
             </div>
-            <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
+            <h3
+              className={`mb-2 font-medium lg:max-w-[352px]  text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+            >
               Experience Credits
             </h3>
-            <p className="text-base lg:max-w-[352px] xl:max-w-[472px]  leading-[160%] ">
+            <p className="text-base lg:max-w-[352px]   leading-[160%] ">
               Outstanding performers willget experience to work with emerging
               startups and gain work experience.
             </p>
@@ -82,10 +92,12 @@ const NewGains = () => {
             <div className="align-top max-w-full text-2xl mb-6 object-cover ">
               <BsFillCalendarCheckFill />
             </div>
-            <h3 className="mb-2 text-[24px] leading-[133%] tracking-[-0.02em] ">
+            <h3
+              className={`mb-2 font-medium lg:max-w-[352px]  text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+            >
               Global Community
             </h3>
-            <p className="text-base lg:max-w-[352px]  xl:max-w-[472px]  leading-[160%] ">
+            <p className="text-base lg:max-w-[352px]   leading-[160%] ">
               Network and collaborate with other ambassadors from various
               universities across the world.
             </p>

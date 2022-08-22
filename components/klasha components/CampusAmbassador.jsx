@@ -11,7 +11,7 @@ const CampusAmbassador = () => {
     <div className="mt-20">
       <HeroSection />
       <ImageDescription />
-      <Testimonials />
+      {/* <Testimonials /> */}
       <NewGains />
       <RoleComponent />
       <Accordian />
