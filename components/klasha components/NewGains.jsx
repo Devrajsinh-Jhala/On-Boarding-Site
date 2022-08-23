@@ -7,7 +7,7 @@ const NewGains = () => {
     <div className="my-20 pt-[144px] pb-[60px]">
       <div className="max-w-[1320px] mx-auto px-4 lg:px-[50px] w-full">
         <h1
-          className={`text-center mb-[60px] font-medium text-[40px] ${styles.fontGazpacho} lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
+          className={`text-center mb-[60px] font-bold text-[40px] ${styles.fontGazpacho} lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
         >
           What you stand to gain
         </h1>
@@ -22,7 +22,7 @@ const NewGains = () => {
             >
               Rewards and Incentives
             </h3>
-            <p className="text-base lg:max-w-[352px] leading-[160%] ">
+            <p className=" lg:max-w-[352px] text-lg tracking-[-0.015em] leading-[1.875rem]  ">
               Get monthly bonuses, performance-based rewards and a 'Rockstar'
               certificate for high performing campus ambassadors.
             </p>
@@ -37,7 +37,7 @@ const NewGains = () => {
             >
               Network with the Industry's Best
             </h3>
-            <p className="text-base lg:max-w-[352px] leading-[160%] ">
+            <p className="lg:max-w-[352px] text-lg tracking-[-0.015em] leading-[1.875rem]  ">
               Get direct exposure to the corporate world and a chance to build
               meaningful connections for your professional network.
             </p>
@@ -52,7 +52,7 @@ const NewGains = () => {
             >
               One of a kind Mentorship Program
             </h3>
-            <p className="text-base lg:max-w-[352px] leading-[160%] ">
+            <p className="lg:max-w-[352px] text-lg tracking-[-0.015em] leading-[1.875rem]">
               An opportunity to be mentored by leading professionals at top
               companies to expand your skillset and grow your ingenuity.
             </p>
@@ -67,7 +67,7 @@ const NewGains = () => {
             >
               Career Support
             </h3>
-            <p className="text-base  lg:max-w-[352px] leading-[160%] ">
+            <p className="lg:max-w-[352px] text-lg tracking-[-0.015em] leading-[1.875rem]  ">
               Develop intellectual, leadership, and creative skills. Become an
               industry ready professional.
             </p>
@@ -82,7 +82,7 @@ const NewGains = () => {
             >
               Experience Credits
             </h3>
-            <p className="text-base lg:max-w-[352px]   leading-[160%] ">
+            <p className="lg:max-w-[352px] text-lg tracking-[-0.015em] leading-[1.875rem] ">
               Outstanding performers willget experience to work with emerging
               startups and gain work experience.
             </p>
@@ -97,7 +97,7 @@ const NewGains = () => {
             >
               Global Community
             </h3>
-            <p className="text-base lg:max-w-[352px]   leading-[160%] ">
+            <p className="lg:max-w-[352px] text-lg tracking-[-0.015em] leading-[1.875rem] ">
               Network and collaborate with other ambassadors from various
               universities across the world.
             </p>

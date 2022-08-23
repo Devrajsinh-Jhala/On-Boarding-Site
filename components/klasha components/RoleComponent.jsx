@@ -5,7 +5,7 @@ const RoleComponent = () => {
   return (
     <div className=" max-w-full lg:max-w-[1320px] mb-10 mx-auto px-4 lg:px-[50px] w-full ">
       <h1
-        className={`text-center max-w-[872px] ${styles.fontGazpacho} mb-8 lg:mb-[60px] mx-auto font-medium text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
+        className={`text-center max-w-[872px] ${styles.fontGazpacho} mb-8 lg:mb-[60px] mx-auto font-bold text-[40px] lg:text-[64px] leading-[110%] lg:leading-[120%] tracking-[-0.02em] `}
       >
         What will your role as a Hirable campus ambassador entail?
       </h1>
@@ -16,7 +16,7 @@ const RoleComponent = () => {
           >
             Learn
           </p>
-          <p className="text-base lg:w-[182px] leading-[160%] ">
+          <p className="lg:w-[182px] text-lg tracking-[-0.015em] leading-[1.875rem]">
             Learn from the best to maximize your strengths and develop sales and
             marketing skills.
           </p>
@@ -27,7 +27,7 @@ const RoleComponent = () => {
           >
             Brainstrom
           </p>
-          <p className="text-base lg:w-[182px] leading-[160%] ">
+          <p className="lg:w-[182px] text-lg tracking-[-0.015em] leading-[1.875rem] ">
             Put your thinking cap on and come up with out-of-the-box ideas to
             work towards the implementation of ideas.
           </p>
@@ -38,7 +38,7 @@ const RoleComponent = () => {
           >
             Spearhead
           </p>
-          <p className="text-base lg:w-[182px] leading-[160%] ">
+          <p className="lg:w-[182px] text-lg tracking-[-0.015em] leading-[1.875rem]">
             Represent Hirable in your campus and promote our new edtech products
             and offerings.
           </p>
@@ -49,7 +49,7 @@ const RoleComponent = () => {
           >
             Grow
           </p>
-          <p className="text-base lg:w-[182px] leading-[160%] ">
+          <p className=" lg:w-[182px] text-lg tracking-[-0.015em] leading-[1.875rem] ">
             Spread the word and let the student community know the ideas and
             product offering by Hirable.
           </p>

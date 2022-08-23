@@ -6,7 +6,7 @@ const HeroSection = () => {
     <div className="max-w-[1320px] mx-auto mb-10 w-full px-4 lg:px-[50px] ">
       <div className="text-center block">
         <h1
-          className={` text-[40px] ${styles.fontGazpacho} font-medium lg:text-[48px] 2xl:text-[80px] 2xl:leading-[110%] leading-[110%] lg:leading-[130%] tracking-[-0.02em] mb-3 lg:mb-6 mx-auto max-w-[1000px] `}
+          className={` text-[40px] ${styles.fontGazpacho} font-bold lg:text-[48px] 2xl:text-[80px] 2xl:leading-[110%] leading-[110%] lg:leading-[130%] tracking-[-0.02em] mb-3 lg:mb-6 mx-auto max-w-[1000px] `}
         >
           Become a Campus Ambassador today!
         </h1>
