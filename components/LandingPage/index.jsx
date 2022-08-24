@@ -1,10 +1,12 @@
 import React from 'react';
-import MainNavigation from './MainNavigation';
+import Navbar from '../students/Navbar';
+// import MainNavigation from './MainNavigation';
 // import Footer from './Footer';
 
 const Index = ({ children }) => (
   <>
-    <MainNavigation />
+    {/* <MainNavigation /> */}
+    <Navbar />
     <main>{children}</main>
     {/* <Footer /> */}
   </>

@@ -28,7 +28,7 @@ const AccordianComponent = ({ question, answer }) => {
             isHidden ? 'hidden' : 'block'
           } ease-in-out `}
         >
-          <p className="mb-0 m-0 p-0 text-base leading-[160%] lg:text-lg lg:tracking-[-0.015em] lg:leading-[1.875rem]">
+          <p className="mb-0 m-0 p-0 text-lg leading-[160%] lg:text-lg lg:tracking-[-0.015em] lg:leading-[1.875rem]">
             {answer}
           </p>
         </div>
