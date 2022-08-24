@@ -16,7 +16,7 @@ const AccordianComponent = ({ question, answer }) => {
           className="flex justify-between items-center cursor-pointer py-6 "
         >
           <div
-            className={`max-w-[720px] ${styles.fontGazpacho} text-[24px] pr-[50px] lg:pr-0 lg:text-[40px] transition-all duration-1000 ease-in-out tracking-[-0.02em] leading-[110%] `}
+            className={`max-w-[720px] ${styles.fontGazpacho} font-medium text-[20px] pr-[50px] lg:pr-0 lg:text-[20px] transition-all duration-1000 ease-in-out tracking-[-0.02em] leading-[140%] `}
           >
             {question}
           </div>

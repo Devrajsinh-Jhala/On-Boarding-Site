@@ -18,7 +18,7 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3
-              className={`mb-2 font-medium text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+              className={`mb-2 font-medium text-[20px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
             >
               Rewards and Incentives
             </h3>
@@ -33,7 +33,7 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3
-              className={`mb-2 font-medium lg:max-w-[352px] text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+              className={`mb-2 font-medium lg:max-w-[352px] text-[20px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
             >
               Network with the Industry's Best
             </h3>
@@ -48,7 +48,7 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3
-              className={`mb-2 font-medium lg:max-w-[352px] text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+              className={`mb-2 font-medium lg:max-w-[352px] text-[20px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
             >
               One of a kind Mentorship Program
             </h3>
@@ -63,7 +63,7 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3
-              className={`mb-2 font-medium lg:max-w-[352px] text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+              className={`mb-2 font-medium lg:max-w-[352px] text-[20px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
             >
               Career Support
             </h3>
@@ -78,7 +78,7 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3
-              className={`mb-2 font-medium lg:max-w-[352px]  text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+              className={`mb-2 font-medium lg:max-w-[352px]  text-[20px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
             >
               Experience Credits
             </h3>
@@ -93,7 +93,7 @@ const NewGains = () => {
               <BsFillCalendarCheckFill />
             </div>
             <h3
-              className={`mb-2 font-medium lg:max-w-[352px]  text-[24px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
+              className={`mb-2 font-medium lg:max-w-[352px]  text-[20px] ${styles.fontGazpacho} leading-[133%] tracking-[-0.02em] `}
             >
               Global Community
             </h3>
