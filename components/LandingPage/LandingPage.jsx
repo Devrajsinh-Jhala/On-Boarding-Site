@@ -7,6 +7,7 @@ import Footer from '../students/Footer';
 import LivePeer from '../Socials/LivePeer';
 import OtherComponents from '../Socials/OtherComponents';
 import styles from '../../styles/student.module.css';
+import Logos from './Logos';
 
 // const bankofamerica = require('../../public/svg/bankofamerica.svg');
 // const wellsfargo = require('../../public/svg/wellsfargo.svg');
@@ -122,40 +123,7 @@ const LandingPage = () => {
           </section>
         </div>
       </div>
-      <div
-        className=" text-center pt-28 pb-16 sm-mid-tablet:pt-16 overflow-x-hidden"
-        data-aos="fade-up"
-        data-aos-delay="220"
-      >
-        <h3
-          className={`leading-first tracking-[-1px] sm-mid-tablet:leading-snug ${styles.fontGazpacho} md:text-sec md:leading-sec font-body mb-8 font-semibold `}
-          style={{
-            fontSize: '30px',
-            fontWeight: '700',
-          }}
-        >
-          They can be your future employers
-        </h3>
-        <div className="flex-wrap justify-center">
-          <div className="mx-auto w-4/5 lg-max:w-full lg-max:pl-2">
-            <div className="grid grid-cols-5 grid-rows-2 text-center flex-wrap mid-lg:grid-cols-2 mid-lg:grid-rows-4 mid-lg:w-11/12 mid-lg:mx-auto sm-mid-max:w-full">
-              {CompanyImages.slice(0, 10).map((img, index) => (
-                <div
-                  key={index}
-                  className="flex flex-wrap flex-grow-0 flex-shrink mb-12 text-center m-5 max-w-company-images max-h-company-images min-h-company-images min-w-company-images justify-center mid-lg:mx-auto"
-                >
-                  <Image
-                    className={loop === index ? 'fadeinout' : null}
-                    src={img}
-                    height="100%"
-                    alt="Company"
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </div>
+      <Logos />
       {/* SECTION 3 */}
       <div
         className="max-w-[850px] mx-auto bg-white pb-12 mt-16 ma"

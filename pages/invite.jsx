@@ -71,8 +71,8 @@ function Invite() {
                     <div>
                       <div className="">
                         <img
-                          alt="Collabbi"
-                          src="/images/collabbi-logo.png"
+                          alt="hirable"
+                          src="/images/hirable logo (gradient).svg"
                           className="inline-block max-w-full border-0 h-7"
                         />
                       </div>

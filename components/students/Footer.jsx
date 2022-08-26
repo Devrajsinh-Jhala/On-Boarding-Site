@@ -137,7 +137,7 @@ function Footer() {
               </p>
             </div>
             <div className="text-[#1e1928a3] text-sm font-light flex flex-col justify-between pt-20 text-plum-64 md:pt-4 lg:flex-row">
-              <span className="block font-medium">India</span>© 2022 Collabbi.
+              <span className="block font-medium">India</span>© 2022 hirable.
               All rights reserved.
             </div>
           </div>

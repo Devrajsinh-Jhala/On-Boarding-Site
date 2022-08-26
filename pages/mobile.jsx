@@ -8,8 +8,8 @@ const mobile = () => {
       <Link href="/" passHref>
         <div className="cursor-pointer px-4 py-4 md:px-8">
           <img
-            alt="Collabbi"
-            src="/images/collabbi-logo.png"
+            alt="hirable"
+            src="/images/hirable logo (gradient).svg"
             className="inline-block max-w-full border-0 h-7"
           />
         </div>
