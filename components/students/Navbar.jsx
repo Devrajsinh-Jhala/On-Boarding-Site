@@ -12,12 +12,12 @@ import { useState } from 'react';
 import { AiOutlineMenu, AiOutlineClose } from 'react-icons/ai';
 
 const Navbar = () => {
-  let Links = [
+  const Links = [
     { name: 'Colleges', links: '/colleges' },
     { name: 'Students', links: '/students' },
   ];
 
-  let [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(false);
 
   // Adding Router Logic to make Links active
 
@@ -30,8 +30,8 @@ const Navbar = () => {
           <Link href="/" passHref>
             <div className="cursor-pointer">
               <img
-                alt="Collabbi"
-                src="/images/collabbi-logo.png"
+                alt="hirable"
+                src="/images/hirable logo (gradient).svg"
                 className="inline-block max-w-full border-0 h-7"
               />
             </div>
@@ -88,14 +88,14 @@ const Navbar = () => {
                 {Links.map((link) => (
                   <div className="">
                     <li
-                      key={link.name}
+                      key={link.links}
                       className="lg:ml-8 text-base lg:my-0 my-7 font-inter"
                     >
                       <Link
                         className="text-black hover:text-[#2536eb] font-semibold duration-500"
                         href={link.links}
                       >
-                        {link.name}
+                        <a>{link.name}</a>
                       </Link>
                     </li>
                   </div>

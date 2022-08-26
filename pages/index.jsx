@@ -5,7 +5,7 @@ import LandingPage from '../components/LandingPage/LandingPage';
 const Home = () => (
   <div className="bg-white">
     <Head>
-      <title>Collabbi</title>
+      <title>hirable</title>
     </Head>
     <Index>
       <LandingPage />
