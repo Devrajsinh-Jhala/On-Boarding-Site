@@ -159,7 +159,7 @@ const LandingPage = () => {
         /> */}
           <div className="ml-8 flex flex-col items-center justify-center text-center mid-lg:mt-8 mt-0">
             <h3
-              className={`text-[30px] ${styles.fontGazpacho} antialiased font-semibold mb-6`}
+              className={`text-[30px] sm-mid-tablet:leading-snug antialiased tracking-[-1px]  ${styles.fontGazpacho} text-center font-bold mb-6`}
             >
               Introducing Hirable
             </h3>

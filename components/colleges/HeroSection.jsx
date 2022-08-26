@@ -11,11 +11,12 @@ const HeroSection = () => {
               <h1
                 className={`font-black antialiased text-[40px] tracking-[-0.01em] leading-[50px] xl:text-[48px] xl:leading-[58px] md:whitespace-pre-wrap text-[#1E1928] ${styles.fontGazpacho} `}
               >
-                Get hired by companies looking for diverse talent
+                Transforming the educational opportunities
               </h1>
               <p className="font-normal   mb-4 text-[18px] tracking-[-0.015em] leading-[2rem] whitespace-pre-wrap py-4 md:mb-0 md:py-8 text-black">
-                We are creating a future where students are rewarded in the
-                pursuit of their career based on their abilities and experience.
+                Hirable is transforming the university recruiting of future.
+                Give your students unique exposure to companies and get them
+                noticed
               </p>
               <button
                 type="button"

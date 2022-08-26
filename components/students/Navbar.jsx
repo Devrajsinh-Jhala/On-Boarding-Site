@@ -19,8 +19,6 @@ const Navbar = () => {
 
   const [open, setOpen] = useState(false);
 
-  // Adding Router Logic to make Links active
-
   const router = useRouter();
 
   return (
@@ -80,12 +78,11 @@ const Navbar = () => {
               {open === true ? <AiOutlineClose /> : <AiOutlineMenu />}
             </div>
             <ul
-              className={`lg:flex text-left pl-10 lg:pb-0 pb-12 absolute lg:static bg-white lg:z-auto left-0 w-full z-[-1] lg:pl-0  lg:w-auto items-center transition-all duration-500 ease-in ${
+              className={`lg:flex flex-col text-left pl-10 lg:pb-0 pb-12 absolute lg:static bg-white lg:z-auto left-0 w-full z-[-1] lg:pl-0  lg:w-auto items-center transition-all duration-500 ease-in ${
                 open ? 'top-20 left-0' : 'top-20 left-[150%]'
               } `}
             >
-              <div className="">
-                {Links.map((link) => (
+              {/* {Links.map((link) => (
                   <div className="">
                     <li
                       key={link.links}
@@ -99,9 +96,25 @@ const Navbar = () => {
                       </Link>
                     </li>
                   </div>
-                ))}
+                ))} */}
+              <div className="flex flex-col items-start justify-start space-y-8 mt-8 mb-8">
+                <Link href="/colleges" passHref>
+                  <a className="px-3">Colleges</a>
+                </Link>
+                <Link href="/students" passHref>
+                  <a
+                    className={
+                      router.pathname === '/students'
+                        ? 'text-[#ef2c5a] bg-[#fef1f0] text-sm rounded-full cursor-pointer block leading-[1.6em] px-3 py-1'
+                        : 'text-black bg-white text-sm rounded-full cursor-pointer block leading-[1.6em] px-3 py-1'
+                    }
+                  >
+                    Students
+                  </a>
+                </Link>
               </div>
-              <div className="flex flex-col items-start justify-start space-y-10">
+
+              <div className="flex flex-col px-3 items-start justify-start space-y-10">
                 <Link href="/mobile" passHref>
                   <div className="block text-base  mr-3 text-black cursor-pointer leading-[1.6em] ">
                     Login
