@@ -146,7 +146,7 @@ const LandingPage = () => {
       </div>
 
       {/* SECTION 4 */}
-      <section className="xl:mx-20">
+      <section className="xl:mx-20 lg:mx-4">
         <div
           className="bg-[#fffaf5] mid-lg:block   mt-18 py-16 pr-4"
           data-aos="fade-up"
