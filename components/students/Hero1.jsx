@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../styles/student.module.css';
 import AboutUs from '../common/Other Components/AboutUs';
+import Roles from './Roles';
 import Footer from './Footer';
 
 function Hero1() {
@@ -289,6 +290,7 @@ function Hero1() {
             </div>
           </div>
         </section>
+        <Roles />
         {/* 
         <section className="relative py-8 md:py-12">
           <div className="relative mx-auto max-w-7xl px-4 lg:px-4">
