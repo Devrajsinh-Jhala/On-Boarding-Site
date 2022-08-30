@@ -23,7 +23,7 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="top-0 shadow-md sticky bg-white z-30 w-full h-20 border-b border-[#f9fafb] flex flex-col px-4 md:px-8 lg:px-12 justify-center">
+      <nav className="top-0 fixed bg-white z-50 w-full h-20 border-b border-[#f9fafb] flex flex-col px-4 md:px-8 lg:px-12 justify-center">
         <div className="flex items-center">
           <Link href="/" passHref>
             <div className="cursor-pointer">
@@ -105,8 +105,8 @@ const Navbar = () => {
                   <a
                     className={
                       router.pathname === '/students'
-                        ? 'text-[#ef2c5a] bg-[#fef1f0] text-sm rounded-full cursor-pointer block leading-[1.6em] px-3 py-1'
-                        : 'text-black bg-white text-sm rounded-full cursor-pointer block leading-[1.6em] px-3 py-1'
+                        ? 'text-[#ef2c5a] bg-[#fef1f0]  rounded-full cursor-pointer block leading-[1.6em] px-3 py-1'
+                        : 'text-black bg-white rounded-full cursor-pointer block leading-[1.6em] px-3 py-1'
                     }
                   >
                     Students

@@ -1,4 +1,5 @@
 import React from 'react';
+import Link from 'next/link';
 
 function Footer() {
   return (
@@ -10,16 +11,30 @@ function Footer() {
             <div className="col-span-2 grid grid-flow-col grid-cols-2 gap-y-10 gap-x-10 lg:grid-cols-3 ">
               <div>
                 <h3 className="md:text-[18px] text-base tracking-[-0.014em] antialiased font-semibold leading-[24px] md:leading-[26px]">
-                  Solutions
+                  Hirable
                 </h3>
                 <ul className="mt-4 space-y-3 md:space-y-4">
+                  <li>
+                    <Link href={'/students'} passHref>
+                      <div className="text-[14px] cursor-pointer leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased">
+                        For students
+                      </div>
+                    </Link>
+                  </li>
                   <li>
                     <a
                       href="#"
                       className="text-[14px] leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased"
                     >
-                      Employers & HR
+                      For companies
                     </a>
+                  </li>
+                  <li>
+                    <Link href={'/colleges'} passHref>
+                      <div className="text-[14px] cursor-pointer leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased">
+                        For colleges
+                      </div>
+                    </Link>
                   </li>
                 </ul>
               </div>
@@ -29,11 +44,18 @@ function Footer() {
                 </h3>
                 <ul className="mt-4 space-y-3 md:space-y-4">
                   <li>
+                    <Link href="/aboutus" passHref>
+                      <div className="text-[14px] cursor-pointer leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased">
+                        About
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
                     <a
                       href="#"
                       className="text-[14px] leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased"
                     >
-                      About
+                      Careers
                     </a>
                   </li>
                 </ul>
@@ -48,7 +70,22 @@ function Footer() {
                       href="#"
                       className="text-[14px] leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased"
                     >
-                      Knowledge Base
+                      Student Leaders
+                    </a>
+                  </li>
+                  <li>
+                    <Link href={'/campus-ambassadors'} passHref>
+                      <div className="text-[14px] cursor-pointer leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased">
+                        Campus Ambassadors
+                      </div>
+                    </Link>
+                  </li>
+                  <li>
+                    <a
+                      href="#"
+                      className="text-[14px] leading-5 text-[#1e1928cc] hover:text-[#1e1928] md:text-[16px] md:leading-6 tracking-[-0.006em] md:-[-0.011em] antialiased"
+                    >
+                      Placement Coordinators
                     </a>
                   </li>
                 </ul>

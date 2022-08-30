@@ -1,4 +1,5 @@
 /* eslint-disable jsx-a11y/anchor-is-valid */
+
 const Footer = () => (
   <div
     className="flex pt-10 pb-0 justify-center border border-solid border-gray-100 bg-white text-base text-black font-Inter"

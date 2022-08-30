@@ -1,6 +1,7 @@
 import React from 'react';
 import styles from '../../styles/student.module.css';
 import FourPoints from './FourPoints';
+import TextLoop from 'react-text-loop';
 
 const HeroSection = () => {
   return (
@@ -91,7 +92,15 @@ const HeroSection = () => {
             <h2
               className={`font-inter ${styles.fontGazpacho} text-[30px]  md:text-[40px] mb-8 font-extrabold leading-[1.3em] tracking-wide md:tracking-[-.015em] text-center  max-w-[960px]  mx-auto `}
             >
-              Scholarships
+              <TextLoop
+                className="text-center mx-auto"
+                fade="true"
+                delay={1000}
+              >
+                <span>Scholarship</span>
+                <span>Fellowship</span>
+                <span>Research</span>
+              </TextLoop>
             </h2>
 
             {/* Description */}
