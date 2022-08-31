@@ -6,7 +6,7 @@ import TextLoop from 'react-text-loop';
 const HeroSection = () => {
   return (
     <section className="bg-white ">
-      <section className="relative ">
+      <section className="relative mt-16 ">
         <div className="relative mx-auto max-w-7xl px-4 lg:px-4">
           <div className="grid rounded-2xl pt-14 lg:min-h-[540px] lg:grid-cols-2 lg:grid-rows-1 lg:items-center lg:py-0 lg:text-left bg-white text-center">
             <div className="px-5 sm:px-10 md:px-16 md:py-10 ">
@@ -92,11 +92,7 @@ const HeroSection = () => {
             <h2
               className={`font-inter ${styles.fontGazpacho} text-[30px]  md:text-[40px] mb-8 font-extrabold leading-[1.3em] tracking-wide md:tracking-[-.015em] text-center  max-w-[960px]  mx-auto `}
             >
-              <TextLoop
-                className="text-center mx-auto"
-                fade="true"
-                delay={1000}
-              >
+              <TextLoop className="text-center mx-auto" fade="true">
                 <span>Scholarship</span>
                 <span>Fellowship</span>
                 <span>Research</span>
